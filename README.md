@@ -73,31 +73,58 @@ POST /valorant
 }
 ```
 
-Valores suportados para playstyle:
-Valor
-Descrição
-aggressive
-Foco em entradas rápidas e eliminações
-defensive
-Prioriza posicionamento e controle de área
-support
-Foco em utilidades e suporte ao time
-strategic
-Controle de ritmo e execução tática
-Mapas suportados:
-Ascent, Split, Fracture, Bind, Breeze, Haven, Icebox, Lotus, Sunset, Pearl, The Range, Piazza, Corrode, District, Kasbah, Drift, Glitch, Abyss, Skirmish A/B/C, Basic Training.
-🔄 Fluxo de Processamento
-Recepção: Payload JSON recebido via HTTPS Adapter
-Enriquecimento: Consultas paralelas às APIs públicas do Valorant
-Regras de Negócio: Groovy Script aplica scoring de agentes e seleção de armas
-IA Generativa: Prompt estruturado enviado ao OpenRouter para refinamento
-Resposta Final: JSON formatado com recomendação completa + dica contextual
-📤 Saída da Recomendação
-json
-1234567
-🔧 Configuração do iFlow
-Package: ZPKG_Valorant_Smart_Advisor
-iFlow: IFL_VALORANT_ADVISOR
+### 🎮 Valores suportados para playstyle
+
+| Valor      | Descrição                                      |
+|------------|-----------------------------------------------|
+| aggressive | Foco em entradas rápidas e eliminações        |
+| defensive  | Prioriza posicionamento e controle de área    |
+| support    | Foco em utilidades e suporte ao time          |
+| strategic  | Controle de ritmo e execução tática           |
+
+---
+
+### 🗺️ Mapas suportados
+
+| Mapa 1     | Mapa 2     | Mapa 3     | Mapa 4     | Mapa 5     | Mapa 6     |
+|------------|------------|------------|------------|------------|------------|
+| Ascent     | Split      | Fracture   | Bind       | Breeze     | Haven      |
+| Icebox     | Lotus      | Sunset     | Pearl      | The Range  | Piazza     |
+| Corrode    | District   | Kasbah     | Drift      | Glitch     | Abyss      |
+| Skirmish A | Skirmish B | Skirmish C | Basic Training |            |            |
+
+
+## 🔄 Fluxo de Processamento
+
+1. **Recepção**  Payload JSON recebido via HTTPS Adapter  
+
+2. **Enriquecimento**  Consultas paralelas às APIs públicas do Valorant  
+
+3. **Regras de Negócio**  Groovy Script aplica scoring de agentes e seleção de armas  
+
+4. **IA Generativa**  Prompt estruturado enviado ao OpenRouter para refinamento  
+
+5. **Resposta Final**  JSON formatado com recomendação completa + dica contextual  
+
+
+## 📤 Saída da Recomendação
+```
+{
+  "agente": "Cypher",
+  "mapa": "The Range",
+  "arma": "Vandal",
+  "estilodojogo": "defensive",
+  "dica": "Segure ângulos importantes e evite se expor. Priorize sobreviver e punir erros do inimigo no mapa The Range."
+}
+```
+
+## 🔧 Configuração do iFlow
+
+> **Package:** `ZPKG_Valorant_Smart_Advisor`  
+> **iFlow:** `IFL_VALORANT_ADVISOR`
+
+<br>
+
 🧱 1. Criação do Package
 
 Nome do Package:
