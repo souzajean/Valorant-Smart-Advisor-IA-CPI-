@@ -260,7 +260,7 @@ GS_Valorant
 <br>
 
 ### ➕ Lógica do ordem de classificação
-📦 [Download do Groovy Script](https://github.com/souzajean/Valorant-Smart-Advisor-IA-CPI-/raw/main/Package/IFL_VALORANT_ADVISOR.zip)
+📦 [Download do Groovy Script](https://github.com/souzajean/Valorant-Smart-Advisor-IA-CPI-/raw/main/Script/GS_Valorant.groovy)
 ![Fluxo](imagens/Screenshot_32.png)
 
 
