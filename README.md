@@ -138,32 +138,20 @@ ZPKG_Valorant_Smart_Advisor
 ![Fluxo](imagens/Screenshot_3.png)
 
 ### 🏷️ 3. Nome do iFlow:
+```
+IFL_VALORANT_ADVISOR
+```
 ![Fluxo](imagens/Screenshot_4.png)
 
+###🔹 4. Configuração do Adapter HTTPS (Sender)
 
+| Parâmetro    | Valor |
+|--------------|------------ |
+| Address      | /valorant |
+| Method       | POST |
+| Content-Type | application/json |
 
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
-
-
-
-
-###🔹 3. Configuração do Adapter HTTPS (Sender)
-
-Parâmetro
-Valor
-Address
-/valorant
-Method
-POST
-Content-Type
-application/json
-
-🔹 4. Content Modifier – Salvar Payload Original
+🔹 5. Content Modifier – Salvar Payload Original
 
 Nome: CM_originalBody
 
@@ -176,6 +164,18 @@ originalBody
 Expression
 ${body}
 java.lang.String
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+
+
+
+
 
 🔹 5. Request-Reply – Consulta APIs Externas
 🗺️ Maps API
