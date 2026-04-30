@@ -422,7 +422,6 @@ def buildStrategy(style, mapType, agent) {
 
     return "Adapte sua estratégia conforme a partida"
 }
-
 ```
 
 
@@ -449,116 +448,11 @@ def buildStrategy(style, mapType, agent) {
 
 
 
-
-
-
-
-
-### 🏷️ Renomeando o Groovy Script
-
-```
-GS_Classificacao
-```
-
-<br>
-
-### ➕ Lógica do ordem de classificação
-```
-import com.sap.gateway
-
-```
-
-<br>
-
-# 🔹 7. Content Modifier
-
-### ➕ Adicionando o Content Modifier
-![Fluxo](imagens/Screenshot_14.png)
-
-<br>
-
-### 🏷️ Renomeando o Content Modifier
-```
-Nome: CM_XMLFinal
-```
-![Fluxo](imagens/Screenshot_15.png)
 
 
 <br>
 
-### ⚙️ Configuração do Content Modifier
-Construindo a resposta final em XML
-Adiciona timestamp (data/hora) e status   
-
-📩 Message Body
-- **Type:** Expression  
-- **Body:**
-```
-<ProcessedOrder>
-    <OrderID>${property.orderId}</OrderID>
-    <CustomerID>${property.customerId}</CustomerID>
-    
-    <Amount>${property.amount}</Amount>
-    <Region>${property.region}</Region>
-    
-    <Category>${property.category}</Category>
-    
-    <Status>${property.status}</Status>
-    <ProcessedAt>${date:now:yyyy-MM-dd HH:mm:ss}</ProcessedAt>
-</ProcessedOrder>
-```
-![Fluxo](imagens/Screenshot_16.png)
-
-<br>
-
-# 🔹 8. Groovy Script
-Registra o payload final no Message Monitoring
-
-📤 Payload de Saída
-5001 2002 750 SP MEDIUM PROCESSED 2026-04-22 10:00:00   
-
-🧠 Principais Funcionalidades   
-✔️ Extração de dados baseada em XPath   
-✔️ Regras de negócio com Script Groovy   
-✔️ Transformação de XML utilizando Content Modifier   
-✔️ Log de payload para monitoramento   
-✔️ Pronto para externalização de parâmetros   
-
-### ➕ Adicionando Groovy Script
-![Fluxo](imagens/Screenshot_17.png)
-
-<br>
-
-### 🏷️ Renomeando o Groovy Script
-![Fluxo](imagens/Screenshot_18.png)
-```
-GS_Log_Payload_Final
-```
-
-<br>
-
-### ➕ Lógica do ordem de classificação
-
-```
-import com.sap.gateway.ip.core.customdev.util.Message
-
-def Message processData(Message message) {
-
-    def body = message.getBody(String)
-
-    def messageLog = messageLogFactory.getMessageLog(message)
-    if(messageLog != null){
-        messageLog.addAttachmentAsString("Payload Final", body, "text/xml")
-    }
-
-    return message
-}
-```
-![Fluxo](imagens/Screenshot_19.png)
-
-<br>
-
-# 🔹 9. Postman
+# 🔹 12. Postman
 
 ### ➕ Enviando o Payload
 📥 Enviando Payload   
@@ -571,7 +465,7 @@ def Message processData(Message message) {
     <Region>SP</Region>
 </Order>
 ```
-![Fluxo](imagens/Screenshot_20.png)
+![Fluxo](imagens/Screenshot_50.png)
 
 <br>
 
@@ -584,18 +478,12 @@ def Message processData(Message message) {
     <Amo
 ```
 
-![Fluxo](imagens/Screenshot_21.png)
+![Fluxo](imagens/Screenshot_50.png)
 
-<br>
 
-# 🔹 8. Monitoramento
-### Monitor Message Processamento
-![Fluxo](imagens/Screenshot_22.png)
 
-<br>
 
-### Log de anexo do Monitor Message
-![Fluxo](imagens/Screenshot_23.png)
+
 
 <br>
 <br>
