@@ -143,10 +143,10 @@ IFL_VALORANT_ADVISOR
 ```
 ![Fluxo](imagens/Screenshot_4.png)
 
-### ➕ 5. Adicionando o Adapter
+### ➕ 4. Adicionando o Adapter
 ![Fluxo](imagens/Screenshot_5.png)
 
-### 🔹 6. Configuração do Adapter HTTPS (Sender)
+### 🔹 5. Configuração do Adapter HTTPS (Sender)
 
 
 | Parâmetro    | Valor            |
@@ -158,16 +158,16 @@ IFL_VALORANT_ADVISOR
 
 
 
-### ➕ 7. Adicionando o Content Modifier
+### ➕ 6. Adicionando o Content Modifier
 ![Fluxo](imagens/Screenshot_7.png)
 
-### 🏷️ 8. Renomeando o Content Modifier
+### 🏷️ 7. Renomeando o Content Modifier
 ```
 Nome: CM_originalBody
 ```
 ![Fluxo](imagens/Screenshot_8.png)
 
-### 🔹 9. Content Modifier – Salvar Payload Original
+### 🔹 8. Content Modifier – Salvar Payload Original
 Nome: CM_originalBody
 
 
