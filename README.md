@@ -1,5 +1,32 @@
-#🎮 Valorant Smart Advisor – IA + SAP CPI
+# 🎮 Valorant Smart Advisor – IA + SAP CPI
 # SAP BTP CPI -Recomendação inteligente para Valorant construída no SAP Integration Suite (CPI), combinando orquestração de APIs, Groovy Scripts e IA Generativa.
+
+<p align="center">
+<img src="https://img.shields.io/badge/SAP-CPI-blue?style=for-the-badge&logo=sap" alt="SAP CPI">
+<img src="https://img.shields.io/badge/Groovy-4298B8?style=for-the-badge&logo=apachegroovy&logoColor=white" alt="Groovy">
+<img src="https://img.shields.io/badge/IA-Generativa-7B3FF2?style=for-the-badge" alt="IA Generativa">
+<img src="https://img.shields.io/badge/REST-API-00ADEF?style=for-the-badge&logo=rest&logoColor=white" alt="REST API">
+<img src="https://img.shields.io/badge/Postman-Testing-FF6C37?style=for-the-badge&logo=postman&logoColor=white" alt="Postman">
+</p>
+
+<p align="center">
+<img src="imagens/capa-linkedin.png" alt="Fluxo Principal" width="100%">
+</p>
+
+📋 Índice
+<details open>
+<summary><strong>Clique para expandir/recolher</strong></summary>
+
+🎯 Visão Geral
+⚙️ Arquitetura da Solução
+🚀 Como Funciona
+🔧 Configuração do iFlow
+📡 Testando com Postman
+🔐 Segurança & Boas Práticas
+📦 Downloads
+🤝 Contribuindo
+</details>
+
 
 O projeto Valorant Smart Advisor é uma solução desenvolvida no SAP Integration Suite (CPI) que combina integração de APIs externas com inteligência artificial para gerar recomendações personalizadas dentro do jogo Valorant.
 
