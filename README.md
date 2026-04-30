@@ -1,6 +1,26 @@
 # Valorant-Smart-Advisor-IA-CPI-
 SAP BTP CPI - Valorant Smart Advisor
 
+O projeto Valorant Smart Advisor é uma solução desenvolvida no SAP Integration Suite (CPI) que combina integração de APIs externas com inteligência artificial para gerar recomendações personalizadas dentro do jogo Valorant.
+
+A aplicação recebe como entrada o mapa e o estilo de jogo do usuário e, a partir disso:
+
+Consulta APIs públicas de dados do jogo (mapas, agentes e armas)
+Processa regras de negócio com Groovy Scripts
+Aplica lógica de recomendação baseada em contexto (mapa + playstyle)
+Utiliza IA via API externa para refinar e enriquecer a resposta
+Retorna uma sugestão final com:
+Agente ideal
+Arma recomendada
+Estratégia personalizada
+
+💡 A solução demonstra na prática:
+
+Integração REST no CPI
+Orquestração de múltiplas APIs
+Processamento dinâmico com Groovy
+Uso de IA generativa em integrações SAP
+
 <br>
 
 ![Fluxo](imagens/capa-linkedin.png)
