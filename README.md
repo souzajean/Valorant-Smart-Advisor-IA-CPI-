@@ -125,13 +125,17 @@ POST /valorant
 
 <br>
 
-🧱 1. Criação do Package
+### 🧱 1. Criação do Package
+![Fluxo](imagens/Screenshot_1.png)
 
 Nome do Package:
+```
+ZPKG_Valorant_Smart_Advisor
+```
+![Fluxo](imagens/Screenshot_2.png)
 
-
-
-
+### ➕ 2. Adição do Artefato iFlow
+![Fluxo](imagens/Screenshot_3.png)
 
 
 
