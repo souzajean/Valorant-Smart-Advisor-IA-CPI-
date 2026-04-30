@@ -143,27 +143,40 @@ IFL_VALORANT_ADVISOR
 ```
 ![Fluxo](imagens/Screenshot_4.png)
 
-###🔹 4. Configuração do Adapter HTTPS (Sender)
+### ➕ 5. Adicionando o Adapter
+![Fluxo](imagens/Screenshot_5.png)
 
-| Parâmetro    | Valor |
-|--------------|------------ |
-| Address      | /valorant |
-| Method       | POST |
+### 🔹 6. Configuração do Adapter HTTPS (Sender)
+
+
+| Parâmetro    | Valor            |
+|--------------|----------------- |
+| Address      | /valorant        |
+| Method       | POST             |
 | Content-Type | application/json |
+![Fluxo](imagens/Screenshot_6.png)
 
-🔹 5. Content Modifier – Salvar Payload Original
 
+
+### ➕ 7. Adicionando o Content Modifier
+![Fluxo](imagens/Screenshot_7.png)
+
+### 🏷️ 8. Renomeando o Content Modifier
+```
+Nome: CM_originalBody
+```
+![Fluxo](imagens/Screenshot_8.png)
+
+### 🔹 9. Content Modifier – Salvar Payload Original
 Nome: CM_originalBody
 
+
+
+
 Configuração – Exchange Properties:
-Name
-Source Type
-Source Value
-Data Type
-originalBody
-Expression
-${body}
-java.lang.String
+|Name | Source Type | Source Value | Data Type |
+|---| --- | --- | --- |
+|originalBody |Expression|${body}|java.lang.String|
 
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
