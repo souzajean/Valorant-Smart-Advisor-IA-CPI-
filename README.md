@@ -244,7 +244,7 @@ Nome: getWeapons
 
 <br>
 
-# 🔹 9. Groovy Script
+# 🔹 10. Groovy Script
 
 ### ➕ Adicionando Groovy Script
 ![Fluxo](imagens/Screenshot_30.png)
@@ -256,17 +256,66 @@ Nome: getWeapons
 ```
 GS_Valorant
 ```
-
 <br>
 
 ### ➕ Lógica do ordem de classificação
+Link do Código
 📦 [Download do Groovy Script - GS_Valorant](https://github.com/souzajean/Valorant-Smart-Advisor-IA-CPI-/blob/main/Script/GS_Valorant.groovy)
 ![Fluxo](imagens/Screenshot_32.png)
 
+<br>
+
+# 🔹 11. Content Modifier
+
+### ➕ Adicionando o Content Modifier
+![Fluxo](imagens/Screenshot_33.png)
+
+<br>
+
+### 🏷️ Renomeando o Content Modifier
+```
+Mame: CM_setValues_IA
+```
+![Fluxo](imagens/Screenshot_34.png)
+
+<br>
+
+### ⚙️ Configuração do Content Modifier
+📩 Message Headers
+```
+| Name           | Source Type | Source Value                                     |
+|----------------|-------------|--------------------------------------------------|
+| Authorization  | Constant    | Bearer sk-or-v1-00000000000000000000000000000000 |
+| Content-Type   | Constant    | application/json                                 |
+```
+![Fluxo](imagens/Screenshot_35.png)
+
+<br>
+
+# 🔹 12. Groovy Script
+
+### ➕ Adicionando Groovy Script
+![Fluxo](imagens/Screenshot_36.png)
+
+<br>
+
+### 🏷️ Renomeando o Groovy Script
+![Fluxo](imagens/Screenshot_37.png)
+```
+GS_PreparePrompt
+```
+<br>
+
+### ➕ Lógica do ordem de classificação
+Link do Código
+📦 [Download do Groovy Script - GS_PreparePrompt](https://github.com/souzajean/Valorant-Smart-Advisor-IA-CPI-/blob/main/Script/GS_PreparePrompt.groovy)
+![Fluxo](imagens/Screenshot_38.png)
+
+<br>
 
 
+	
 
-     
 
 
 
@@ -296,7 +345,7 @@ GS_Valorant
 
 <br>
 
-# 🔹 12. Postman
+# 🔹 15. Postman
 
 ### ➕ Enviando o Payload
 📥 Enviando Payload   
