@@ -137,7 +137,8 @@ ZPKG_Valorant_Smart_Advisor
 ### ➕ 2. Adição do Artefato iFlow
 ![Fluxo](imagens/Screenshot_3.png)
 
-
+### 🏷️ 3. Nome do iFlow:
+![Fluxo](imagens/Screenshot_4.png)
 
 
 
@@ -149,42 +150,9 @@ ZPKG_Valorant_Smart_Advisor
 
 
 
-12345678910111213
-Valores suportados para playstyle:
-Valor
-Descrição
-aggressive
-Foco em entradas rápidas e eliminações
-defensive
-Prioriza posicionamento e controle de área
-support
-Foco em utilidades e suporte ao time
-strategic
-Controle de ritmo e execução tática
-Mapas suportados: Ascent, Split, Fracture, Bind, Breeze, Haven, Icebox, Lotus, Sunset, Pearl, The Range, Piazza, Corrode, District, Kasbah, Drift, Glitch, Abyss, Skirmish A/B/C, Basic Training.
-🔄 Fluxo de Processamento
-Recepção: Payload JSON recebido via HTTPS Adapter
-Enriquecimento: Consultas paralelas às APIs públicas do Valorant
-Regras de Negócio: Groovy Script aplica scoring de agentes e seleção de armas
-IA Generativa: Prompt estruturado enviado ao OpenRouter para refinamento
-Resposta Final: JSON formatado com recomendação completa + dica contextual
-📤 Saída da Recomendação
-json
-1234567
-🔧 Configuração do iFlow
-Package: ZPKG_Valorant_Smart_Advisor
-iFlow: IFL_VALORANT_ADVISOR
-🧱 1. Criação do Package
 
-Nome do Package:
-1
 
-➕ 2. Adição do Artefato iFlow
-
-Nome do iFlow:
-1
-
-🔹 3. Configuração do Adapter HTTPS (Sender)
+###🔹 3. Configuração do Adapter HTTPS (Sender)
 
 Parâmetro
 Valor
