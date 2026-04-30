@@ -309,6 +309,7 @@ GS_PreparePrompt
 ### ➕ Lógica do ordem de classificação
 Link do Código
 📦 [Download do Groovy Script - GS_PreparePrompt](https://github.com/souzajean/Valorant-Smart-Advisor-IA-CPI-/blob/main/Script/GS_PreparePrompt.groovy)
+
 ![Fluxo](imagens/Screenshot_38.png)
 
 <br>
