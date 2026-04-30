@@ -177,65 +177,33 @@ Configuração – Exchange Properties:
 ![Fluxo](imagens/Screenshot_9.png)
 
 
+### 🔹 9. Request-Reply – Consulta APIs Externas
+### 🗺️ Maps API →
+
+| Parâmetro     | Valor                            | 
+| ------------- | -------------------------------- |
+|Address        | https://valorant-api.com/v1/maps |
+| Query         | language=pt-BR                   | 
+| Method        | GET                              |
+|Authentication | None                             |
 
 
 
-
-
-
-
-
-
-
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
-
-
-
-
-
-
-🔹 5. Request-Reply – Consulta APIs Externas
-🗺️ Maps API
-
-→
-
-Parâmetro
-Valor
-Address
-https://valorant-api.com/v1/maps
-Query
-language=pt-BR
-Method
-GET
-Authentication
-None
 Content Modifier – getMaps:
-Name
-Source Type
-Source Value
-Data Type
-maps
-Expression
-${body}
-java.lang.String
+| Name  | Source Type | Source Value | Data Type        |
+| ----- | ----------- | ------------ | ---------------- |
+| maps  | Expression  | ${body}      | java.lang.String |
 
-🎮 Agents API
+### 🎮 Agents API →
 
-→
+| Parâmetro     | Valor                              | 
+|Address        | https://valorant-api.com/v1/agents |
+| Query         | language=pt-BR                     | 
+| Method        | GET                                |
+|Authentication | None                               |
 
-Parâmetro
-Valor
-Address
-https://valorant-api.com/v1/agents
-Query
-language=pt-BR
-Method
-GET
+
+
 Content Modifier – getAgents:
 Name
 Source Type
@@ -246,7 +214,7 @@ Expression
 ${body}
 java.lang.String
 
-🔫 Weapons API
+### 🔫 Weapons API
 
 →
 
@@ -267,6 +235,28 @@ weapons
 Expression
 ${body}
 java.lang.String
+
+
+
+
+
+
+
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+
+
+
+
+
+
 
 🔹 6. Groovy Script – Regras de Negócio
 
