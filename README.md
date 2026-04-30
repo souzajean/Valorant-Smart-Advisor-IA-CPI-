@@ -194,6 +194,7 @@ Configuração – Exchange Properties:
 | Method          | GET                              |
 |Authentication   | None                             |
 | Request Headers | *                                |
+
 ![Fluxo](imagens/Screenshot_12.png)
 
 ### 🔹 12. Adicionando o Content Modifier
@@ -209,6 +210,7 @@ Nome: CM_originalBody
 | Name  | Source Type | Source Value | Data Type        |
 | ----- | ----------- | ------------ | ---------------- |
 | maps  | Expression  | ${body}      | java.lang.String |
+
 ![Fluxo](imagens/Screenshot_15.png)
 
 
