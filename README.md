@@ -217,6 +217,7 @@ Query: language=pt-BR
 Method: GET
 Authentication: None
 ```
+<br>
 
 # 🔹 9. Content Modifier
 
@@ -314,50 +315,99 @@ Link do Código
 
 <br>
 
+# 🔹 13. Request Replay
 
-	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+### ➕ Adicionando o Request Replay
+![Fluxo](imagens/Screenshot_39.png)
 
 <br>
 
-# 🔹 15. Postman
+### 🏷️ Renomeando o Request Replay
+```
+Nome: RR_IA
+```
+![Fluxo](imagens/Screenshot_40.png)
+
+<br>
+
+### ➕ Adicionando Receiver
+![Fluxo](imagens/Screenshot_41.png)
+
+<br>
+
+### ➕ Adicionando HTTPS
+![Fluxo](imagens/Screenshot_42.png)
+
+<br>
+
+### ⚙️ Configuração do Content Modifier
+![Fluxo](imagens/Screenshot_43.png)
+```
+Address: https://openrouter.ai/api/v1/chat/completions
+Method: POST
+Authentication None
+
+Request Headers: *
+```
+
+<br>
+	
+# 🔹 14. Groovy Script
+
+### ➕ Adicionando Groovy Script
+![Fluxo](imagens/Screenshot_44.png)
+
+<br>
+
+### 🏷️ Renomeando o Groovy Script
+![Fluxo](imagens/Screenshot_45.png)
+```
+GS_ParseAI
+```
+<br>
+
+### ➕ Lógica do ordem de classificação
+Link do Código
+📦 [Download do Groovy Script - GS_ParseAI](https://github.com/souzajean/Valorant-Smart-Advisor-IA-CPI-/blob/main/Script/GS_ParseAI.groovy)
+
+![Fluxo](imagens/Screenshot_46.png)
+
+<br>
+
+### ⚙️ Configuração final iflow
+![Fluxo](imagens/Screenshot_47.png)
+
+<br>
+
+# 🔹 15. Site OpenRouter
+
+### ⚙️ Configuração OpenRouter
+```
+https://openrouter.ai/workspaces/default/keys
+```
+![Fluxo](imagens/Screenshot_48.png)
+
+<br>
+
+### ⚙️ Configuração OpenRouter
+![Fluxo](imagens/Screenshot_49.png)
+
+<br>
+
+<br>
+
+# 🔹 16. Postman
 
 ### ➕ Enviando o Payload
-📥 Enviando Payload   
+📥 Enviando Payload Aggressive
 - Method: **POST**   
-- URL: **/order/classify**   
+- URL: **/valorant**   
 - Body:   
 ```
-<Order>
-  mount>
-    <Region>SP</Region>
-</Order>
+{
+  "map": "District",
+  "playstyle": "aggressive"
+}
 ```
 ![Fluxo](imagens/Screenshot_50.png)
 
@@ -366,13 +416,43 @@ Link do Código
 ### Resultado Payload
 📤 Saída Payload
 ```
-<ProcessedOrder>
-    <OrderID>5001</OrderID>
-    <CustomerID>2002</CustomerID>
-    <Amo
+{
+    "agente": "Fade",
+    "mapa": "Fracture",
+    "arma": "Phantom",
+    "estilodojogo": "aggressive",
+    "dica": "Jogue avançando rapidamente, buscando eliminações iniciais e pressionando o inimigo em pontos estratégicos do mapa Fracture."
+}
 ```
 
-![Fluxo](imagens/Screenshot_50.png)
+
+### ➕ Enviando o Payload
+📥 Enviando Payload defensive
+- Method: **POST**   
+- URL: **/valorant**   
+- Body:   
+```
+{
+  "map": "District",
+  "playstyle": "defensive"
+}
+```
+![Fluxo](imagens/Screenshot_51.png)
+
+<br>
+
+### Resultado Payload
+📤 Saída Payload defensive
+```
+{
+    "agente": "Fade",
+    "mapa": "Fracture",
+    "arma": "Phantom",
+    "estilodojogo": "defensive",
+    "dica": "Jogue avançando rapidamente, buscando eliminações iniciais e pressionando o inimigo em pontos estratégicos do mapa Fracture."
+}
+```
+![Fluxo](imagens/Screenshot_51.png)
 
 
 
