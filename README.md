@@ -1,519 +1,410 @@
 # 🎮 Valorant Smart Advisor – IA + SAP CPI
-# SAP BTP CPI -Recomendação inteligente para Valorant construída no SAP Integration Suite (CPI), combinando orquestração de APIs, Groovy Scripts e IA Generativa.
+
+> **Solução de recomendação inteligente para Valorant construída no SAP Integration Suite (CPI), combinando orquestração de APIs, Groovy Scripts e IA Generativa.**
 
 <p align="center">
-<img src="https://img.shields.io/badge/SAP-CPI-blue?style=for-the-badge&logo=sap" alt="SAP CPI">
-<img src="https://img.shields.io/badge/Groovy-4298B8?style=for-the-badge&logo=apachegroovy&logoColor=white" alt="Groovy">
-<img src="https://img.shields.io/badge/IA-Generativa-7B3FF2?style=for-the-badge" alt="IA Generativa">
-<img src="https://img.shields.io/badge/REST-API-00ADEF?style=for-the-badge&logo=rest&logoColor=white" alt="REST API">
-<img src="https://img.shields.io/badge/Postman-Testing-FF6C37?style=for-the-badge&logo=postman&logoColor=white" alt="Postman">
+  <img src="https://img.shields.io/badge/SAP-CPI-blue?style=for-the-badge&logo=sap" alt="SAP CPI">
+  <img src="https://img.shields.io/badge/Groovy-4298B8?style=for-the-badge&logo=apachegroovy&logoColor=white" alt="Groovy">
+  <img src="https://img.shields.io/badge/IA-Generativa-7B3FF2?style=for-the-badge" alt="IA Generativa">
+  <img src="https://img.shields.io/badge/REST-API-00ADEF?style=for-the-badge&logo=rest&logoColor=white" alt="REST API">
+  <img src="https://img.shields.io/badge/Postman-Testing-FF6C37?style=for-the-badge&logo=postman&logoColor=white" alt="Postman">
 </p>
 
 <p align="center">
-<img src="imagens/capa-linkedin.png" alt="Fluxo Principal" width="100%">
+  <img src="imagens/capa-linkedin.png" alt="Fluxo Principal" width="100%">
 </p>
 
-📋 Índice
+---
+
+## 📋 Índice
+
 <details open>
 <summary><strong>Clique para expandir/recolher</strong></summary>
 
-🎯 Visão Geral
-⚙️ Arquitetura da Solução
-🚀 Como Funciona
-🔧 Configuração do iFlow
-📡 Testando com Postman
-🔐 Segurança & Boas Práticas
-📦 Downloads
-🤝 Contribuindo
+1. [🎯 Visão Geral](#-visão-geral)
+2. [⚙️ Arquitetura da Solução](#️-arquitetura-da-solução)
+3. [🚀 Como Funciona](#-como-funciona)
+4. [🔧 Configuração do iFlow](#-configuração-do-iflow)
+5. [📡 Testando com Postman](#-testando-com-postman)
+6. [🔐 Segurança & Boas Práticas](#-segurança--boas-práticas)
+7. [📦 Downloads](#-downloads)
+8. [🤝 Contribuindo](#-contribuindo)
+
 </details>
 
+---
 
-O projeto Valorant Smart Advisor é uma solução desenvolvida no SAP Integration Suite (CPI) que combina integração de APIs externas com inteligência artificial para gerar recomendações personalizadas dentro do jogo Valorant.
+## 🎯 Visão Geral
 
-A aplicação recebe como entrada o mapa e o estilo de jogo do usuário e, a partir disso:
+O **Valorant Smart Advisor** é uma solução desenvolvida no **SAP Integration Suite (CPI)** que combina integração de APIs externas com inteligência artificial para gerar recomendações personalizadas dentro do jogo **Valorant**.
 
-Consulta APIs públicas de dados do jogo (mapas, agentes e armas)
-Processa regras de negócio com Groovy Scripts
-Aplica lógica de recomendação baseada em contexto (mapa + playstyle)
-Utiliza IA via API externa para refinar e enriquecer a resposta
-Retorna uma sugestão final com:
-Agente ideal
-Arma recomendada
-Estratégia personalizada
+### ✨ Funcionalidades
 
-💡 A solução demonstra na prática:
+| Entrada | Processamento | Saída |
+|---------|--------------|-------|
+| 🗺️ Mapa do jogo | 🔍 Consulta APIs públicas (maps, agents, weapons) | 🎯 Agente ideal |
+| 🎮 Estilo de jogo | ⚙️ Regras de negócio com Groovy Scripts | 🔫 Arma recomendada |
+| | 🧠 Lógica de recomendação contextual | 📋 Estratégia personalizada |
+| | 🤖 IA Generativa para refinamento da resposta | 💡 Dica tática inteligente |
 
-Integração REST no CPI
-Orquestração de múltiplas APIs
-Processamento dinâmico com Groovy
-Uso de IA generativa em integrações SAP
+### 💡 O que esta solução demonstra na prática:
 
-<br>
-
-![Fluxo](imagens/capa-linkedin.png)
+- ✅ **Integração REST** no SAP CPI com adapters HTTPS
+- ✅ **Orquestração de múltiplas APIs** externas (Valorant API + OpenRouter)
+- ✅ **Processamento dinâmico** com Groovy Scripts (parsing, scoring, lógica de domínio)
+- ✅ **Padrão de integração com IA Generativa**: prompt engineering, parsing de resposta e fallback
+- ✅ **Gestão de contexto** via Exchange Properties e Content Modifiers
 
 ---
 
-<br>
+## ⚙️ Arquitetura da Solução
 
-# 🏗️ 🔧 Arquitetura do iFlow
+┌─────────────────┐
+│   Postman/Client│
+│  POST /valorant │
+│  {map, style}   │
+└────────┬────────┘
+         │
+         ▼
+┌─────────────────┐
+│  HTTPS Adapter  │ ──► /valorant
+└────────┬────────┘
+         ▼
+┌─────────────────┐   
+│ CM_originalBody │ ──► Salva payload original   
+└────────┬────────┘   
+         ▼   
+┌─────────────────────────────────────┐
+│  PARALELO: Enriquecimento de Dados  │
+│  ├─ RR_Maps    → valorant-api/maps  │
+│  ├─ RR_Agents  → valorant-api/agents│
+│  └─ RR_Weapons → valorant-api/weapons│
+└────────┬────────────────────────────┘
+         ▼
+┌─────────────────┐
+│  GS_Valorant    │ ◄─ Regras de negócio + scoring
+│  (Groovy)       │    + classificação + estratégia
+└────────┬────────┘
+         ▼
+┌─────────────────┐
+│ CM_setValues_IA │ ──► Headers: Auth + Content-Type
+└────────┬────────┘
+         ▼
+┌─────────────────┐
+│ GS_PreparePrompt│ ◄─ Prompt engineering para LLM
+│  (Groovy)       │    + montagem do payload OpenRouter
+└────────┬────────┘
+         ▼
+┌─────────────────┐
+│  RR_IA          │ ──► POST openrouter.ai/chat/completions
+└────────┬────────┘
+         ▼
+┌─────────────────┐
+│  GS_ParseAI     │ ◄─ Parsing da resposta + dica contextual
+│  (Groovy)       │    + formatação final
+└────────┬────────┘
+         ▼
+┌─────────────────┐
+│  HTTPS Response │ ──► JSON final para o cliente
+└─────────────────┘
 
-<br><br>
 
-# 🔄 1. Fluxo da Integração
 
-<br>
 
-### 🧱 Criando o Package
-![Fluxo](imagens/Screenshot_1.png)
 
-<br><br>
 
-### 🏷️ Nome do Package
-```
-ZPKG_Valorant_Smart_Advisor
-```
-![Fluxo](imagens/Screenshot_2.png)
 
-<br>
 
-### ➕ Adicionando o Artefato
-![Fluxo](imagens/Screenshot_3.png)
 
-<br>
 
-### 🏷️ Nome do iFlow
-```
-IFL_VALORANT_ADVISOR
-```
-![Fluxo](imagens/Screenshot_4.png)
 
-<br>
 
-### ➕ Adicionando o Adapter
-![Fluxo](imagens/Screenshot_5.png)
 
-<br> 
 
-# 🔹 2. HTTPS Sender (Trigger)
-```
-Endpoint: /valorant
-```
-![Fluxo](imagens/Screenshot_6.png)
 
-<br>
 
-# 🔹 3. Content Modifier
+12345678910111213
+Valores suportados para playstyle:
+Valor
+Descrição
+aggressive
+Foco em entradas rápidas e eliminações
+defensive
+Prioriza posicionamento e controle de área
+support
+Foco em utilidades e suporte ao time
+strategic
+Controle de ritmo e execução tática
+Mapas suportados: Ascent, Split, Fracture, Bind, Breeze, Haven, Icebox, Lotus, Sunset, Pearl, The Range, Piazza, Corrode, District, Kasbah, Drift, Glitch, Abyss, Skirmish A/B/C, Basic Training.
+🔄 Fluxo de Processamento
+Recepção: Payload JSON recebido via HTTPS Adapter
+Enriquecimento: Consultas paralelas às APIs públicas do Valorant
+Regras de Negócio: Groovy Script aplica scoring de agentes e seleção de armas
+IA Generativa: Prompt estruturado enviado ao OpenRouter para refinamento
+Resposta Final: JSON formatado com recomendação completa + dica contextual
+📤 Saída da Recomendação
+json
+1234567
+🔧 Configuração do iFlow
+Package: ZPKG_Valorant_Smart_Advisor
+iFlow: IFL_VALORANT_ADVISOR
+🧱 1. Criação do Package
 
-### ➕ Adicionando o Content Modifier
-![Fluxo](imagens/Screenshot_7.png)
+Nome do Package:
+1
 
-<br>
+➕ 2. Adição do Artefato iFlow
 
-### 🏷️ Renomeando o Content Modifier
-```
+Nome do iFlow:
+1
+
+🔹 3. Configuração do Adapter HTTPS (Sender)
+
+Parâmetro
+Valor
+Address
+/valorant
+Method
+POST
+Content-Type
+application/json
+
+🔹 4. Content Modifier – Salvar Payload Original
+
 Nome: CM_originalBody
+
+Configuração – Exchange Properties:
+Name
+Source Type
+Source Value
+Data Type
+originalBody
+Expression
+${body}
+java.lang.String
+
+🔹 5. Request-Reply – Consulta APIs Externas
+🗺️ Maps API
+
+→
+
+Parâmetro
+Valor
+Address
+https://valorant-api.com/v1/maps
+Query
+language=pt-BR
+Method
+GET
+Authentication
+None
+Content Modifier – getMaps:
+Name
+Source Type
+Source Value
+Data Type
+maps
+Expression
+${body}
+java.lang.String
+
+🎮 Agents API
+
+→
+
+Parâmetro
+Valor
+Address
+https://valorant-api.com/v1/agents
+Query
+language=pt-BR
+Method
+GET
+Content Modifier – getAgents:
+Name
+Source Type
+Source Value
+Data Type
+agents
+Expression
+${body}
+java.lang.String
+
+🔫 Weapons API
+
+→
+
+Parâmetro
+Valor
+Address
+https://valorant-api.com/v1/weapons
+Query
+language=pt-BR
+Method
+GET
+Content Modifier – getWeapons:
+Name
+Source Type
+Source Value
+Data Type
+weapons
+Expression
+${body}
+java.lang.String
+
+🔹 6. Groovy Script – Regras de Negócio
+
+Nome: GS_Valorant
+
+📦 Código fonte:
+Download do Groovy Script - GS_Valorant.groovy
+
+🔹 7. Preparação para IA – Headers e Prompt
+Content Modifier – CM_setValues_IA:
+
+→
+
+Header
+Source Type
+Source Value
+Authorization
+Constant
+Bearer sk-or-v1-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+Content-Type
+Constant
+application/json
+⚠️ Atenção: Substitua a chave de exemplo pela sua chave real do OpenRouter.
+Groovy Script – GS_PreparePrompt:
+
+→
+
+📦 Código fonte:
+Download do Groovy Script - GS_PreparePrompt.groovy
+🔹 8. Request-Reply – Chamada à IA (OpenRouter)
+
+→
+
+Parâmetro
+Valor
+Nome
+RR_IA
+Address
+https://openrouter.ai/api/v1/chat/completions
+Method
+POST
+Authentication
+None
+Request Headers
+* (herda do Content Modifier anterior)
+🔹 9. Groovy Script – Parsing da Resposta da IA
+
+Nome: GS_ParseAI
+
+📦 Código fonte:
+Download do Groovy Script - GS_ParseAI.groovy
+
+🔹 10. Configuração Final do iFlow
+
+🔐 Configuração OpenRouter
+🔑 Gerenciamento de Chaves de API
+URL: https://openrouter.ai/workspaces/default/keys
+
+⚙️ Modelo Utilizado
+
+Parâmetro
+Valor
+Model
+nvidia/nemotron-3-super-120b-a12b:free
+Temperature
+0.3 (respostas mais determinísticas)
+Output Format
+JSON estruturado
+📡 Testando com Postman
+🎯 Payload – Estilo Agressivo
+json
+12345
+
+🛡️ Payload – Estilo Defensivo
+json
+12345
+
+🤝 Payload – Estilo Suporte
+json
+12345
+
+🧠 Payload – Estilo Estratégico
+json
+12345
+
+🔐 Segurança & Boas Práticas
+⚠️ Importante: Este repositório é para fins educacionais e de demonstração.
+🔒 Recomendações para Produção
+Área
+Situação Atual
+Sugestão para Produção
+🔑 API Keys
+Hardcoded no Content Modifier
+Usar SAP Credential Store ou BTP Destination Service
+🔄 Resiliência
+Sem fallback na chamada à IA
+Adicionar Exception Subprocess com retry ou resposta estática
+📦 Validação
+Validação básica no Groovy
+Incluir JSON Schema Validator antes do processamento
+📊 Monitoramento
+Logs via message.log
+Integrar com SAP Cloud Integration Monitor + custom metrics
+⚡ Performance
+Chamadas sequenciais às APIs
+Avaliar Multicast paralelo para maps/agents/weapons
+♻️ Cache
+Sem cache de dados estáticos
+Usar Data Store do CPI para cache de 15-30min
+🚫 Dados Sensíveis
+Nunca commitar chaves de API reais no repositório
+Utilizar variáveis de ambiente ou serviços seguros de credenciais
+Rotacionar chaves periodicamente
+📦 Downloads
+🗂️ Pacote Completo do iFlow
+📥 Download do iFlow – CPI_ZPKG_Valorant-Smart-Advisor-IA-CPI-
+💡 Como importar no SAP CPI:
+Acesse o SAP Integration Suite
+Navegue até Monitor → Artifacts
+Clique em Import e selecione o arquivo .zip
+Configure as destinations/credenciais conforme necessário
+Ative o iFlow e teste via Postman
+📄 Scripts Groovy Individuais
+Script
+Função
+Link
+GS_Valorant.groovy
+Regras de negócio, scoring e estratégia
+Baixar
+GS_PreparePrompt.groovy
+Engenharia de prompt para IA
+Baixar
+GS_ParseAI.groovy
+Parsing e formatação da resposta da IA
+Baixar
+🤝 Contribuindo
+Contribuições são bem-vindas! Sinta-se à vontade para:
+🍴 Fazer fork do projeto
+🌿 Criar uma branch para sua feature (git checkout -b feature/AmazingFeature)
+💾 Commitar suas alterações (git commit -m 'Add: AmazingFeature')
+📤 Enviar para o repositório (git push origin feature/AmazingFeature)
+🔓 Abrir um Pull Request
+🐛 Encontrou um bug?
+Abra uma Issue descrevendo o problema
+Inclua passos para reproduzir e, se possível, logs do CPI
+Sugira uma solução ou melhoria
+📄 Licença
+Este projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
+<p align="center">
+<strong>Desenvolvido com 💙 para a comunidade SAP e gamers</strong><br>
+<sub>Feito por <a href="https://github.com/souzajean">@souzajean</a> • SAP BTP • Valorant Smart Advisor</sub>
+</p>
+
+<p align="center">
+<a href="#-valorant-smart-advisor--ia--sap-cpi">⬆️ Voltar ao topo</a>
+</p>
 ```
-![Fluxo](imagens/Screenshot_8.png)
-
-
-<br>
-
-### ⚙️ Configuração do Content Modifier
-📩 Exchange Properties
-```
-| Name        | Source Type | Source Value        | Data Type        |
-|-------------|-------------|---------------------|------------------|
-| originalBody| Expression  | ${body}             | java.lang.String |
-
-
-```
-![Fluxo](imagens/Screenshot_9.png)
-
-<br>
-
-# 🔹 4. Request Replay
-
-### ➕ Adicionando o Request Replay
-![Fluxo](imagens/Screenshot_10.png)
-
-<br>
-
-### ➕ Adicionando HTTPS
-![Fluxo](imagens/Screenshot_11.png)
-
-<br>
-
-### ⚙️ Configuração do Request Replay
-![Fluxo](imagens/Screenshot_12.png)
-```
-Address: https://valorant-api.com/v1/maps
-Query: language=pt-BR
-Method: GET
-Authentication: None
-```
-# 🔹 5. Content Modifier
-
-### ➕ Adicionando o Content Modifier
-![Fluxo](imagens/Screenshot_13.png)
-
-<br>
-
-### 🏷️ Renomeando o Content Modifier
-```
-Nome: getMaps
-```
-![Fluxo](imagens/Screenshot_14.png)
-
-
-<br>
-
-### ⚙️ Configuração do Content Modifier
-📩 Exchange Properties
-```
-| Name        | Source Type | Source Value        | Data Type        |
-|-------------|-------------|---------------------|------------------|
-| maps        | Expression  | ${body}             | java.lang.String |
-
-
-```
-![Fluxo](imagens/Screenshot_15.png)
-
-<br>
-
-
-# 🔹 6. Request Replay
-
-### ➕ Adicionando o Request Replay
-![Fluxo](imagens/Screenshot_16.png)
-
-<br>
-
-### ➕ Adicionando Receiver
-![Fluxo](imagens/Screenshot_17.png)
-
-<br>
-
-### ➕ Adicionando HTTPS
-![Fluxo](imagens/Screenshot_18.png)
-
-<br>
-
-### ⚙️ Configuração do Request Replay
-![Fluxo](imagens/Screenshot_19.png)
-```
-Address: https://valorant-api.com/v1/agents
-Query: language=pt-BR
-Method: GET
-Authentication: None
-```
-
-# 🔹 7. Content Modifier
-
-### ➕ Adicionando o Content Modifier
-![Fluxo](imagens/Screenshot_20.png)
-
-<br>
-
-### 🏷️ Renomeando o Content Modifier
-```
-Nome: getAgents
-```
-
-### ⚙️ Configuração do Content Modifier
-📩 Exchange Properties
-```
-| Name        | Source Type | Source Value        | Data Type        |
-|-------------|-------------|---------------------|------------------|
-| agents      | Expression  | ${body}             | java.lang.String |
-```
-![Fluxo](imagens/Screenshot_21.png)
-
-<br>
-
-# 🔹 8. Request Replay
-
-### ➕ Adicionando o Request Replay
-![Fluxo](imagens/Screenshot_22.png)
-
-<br>
-
-### 🏷️ Renomeando o Request Replay
-```
-Nome: RR_Weapons
-```
-![Fluxo](imagens/Screenshot_23.png)
-
-<br>
-
-### ➕ Adicionando Receiver
-![Fluxo](imagens/Screenshot_24.png)
-
-<br>
-
-### ➕ Adicionando HTTPS
-![Fluxo](imagens/Screenshot_25.png)
-
-<br>
-
-### ⚙️ Configuração do Content Modifier
-![Fluxo](imagens/Screenshot_26.png)
-```
-Address: https://valorant-api.com/v1/weapons
-Query: language=pt-BR
-Method: GET
-Authentication: None
-```
-<br>
-
-# 🔹 9. Content Modifier
-
-### ➕ Adicionando o Content Modifier
-![Fluxo](imagens/Screenshot_27.png)
-
-<br>
-
-### 🏷️ Renomeando o Content Modifier
-```
-Nome: getWeapons
-```
-![Fluxo](imagens/Screenshot_28.png)
-
-<br>
-
-### ⚙️ Configuração do Content Modifier
-📩 Exchange Properties
-```
-| Name         | Source Type | Source Value        | Data Type        |
-|--------------|-------------|---------------------|------------------|
-| weapons      | Expression  | ${body}             | java.lang.String |
-```
-![Fluxo](imagens/Screenshot_29.png)
-
-<br>
-
-# 🔹 10. Groovy Script
-
-### ➕ Adicionando Groovy Script
-![Fluxo](imagens/Screenshot_30.png)
-
-<br>
-
-### 🏷️ Renomeando o Groovy Script
-![Fluxo](imagens/Screenshot_31.png)
-```
-GS_Valorant
-```
-<br>
-
-### ➕ Lógica do ordem de classificação
-Link do Código
-📦 [Download do Groovy Script - GS_Valorant](https://github.com/souzajean/Valorant-Smart-Advisor-IA-CPI-/blob/main/Script/GS_Valorant.groovy)
-![Fluxo](imagens/Screenshot_32.png)
-
-<br>
-
-# 🔹 11. Content Modifier
-
-### ➕ Adicionando o Content Modifier
-![Fluxo](imagens/Screenshot_33.png)
-
-<br>
-
-### 🏷️ Renomeando o Content Modifier
-```
-Mame: CM_setValues_IA
-```
-![Fluxo](imagens/Screenshot_34.png)
-
-<br>
-
-### ⚙️ Configuração do Content Modifier
-📩 Message Headers
-```
-| Name           | Source Type | Source Value                                     |
-|----------------|-------------|--------------------------------------------------|
-| Authorization  | Constant    | Bearer sk-or-v1-00000000000000000000000000000000 |
-| Content-Type   | Constant    | application/json                                 |
-```
-![Fluxo](imagens/Screenshot_35.png)
-
-<br>
-
-# 🔹 12. Groovy Script
-
-### ➕ Adicionando Groovy Script
-![Fluxo](imagens/Screenshot_36.png)
-
-<br>
-
-### 🏷️ Renomeando o Groovy Script
-![Fluxo](imagens/Screenshot_37.png)
-```
-GS_PreparePrompt
-```
-<br>
-
-### ➕ Lógica do ordem de classificação
-Link do Código
-📦 [Download do Groovy Script - GS_PreparePrompt](https://github.com/souzajean/Valorant-Smart-Advisor-IA-CPI-/blob/main/Script/GS_PreparePrompt.groovy)
-
-![Fluxo](imagens/Screenshot_38.png)
-
-<br>
-
-# 🔹 13. Request Replay
-
-### ➕ Adicionando o Request Replay
-![Fluxo](imagens/Screenshot_39.png)
-
-<br>
-
-### 🏷️ Renomeando o Request Replay
-```
-Nome: RR_IA
-```
-![Fluxo](imagens/Screenshot_40.png)
-
-<br>
-
-### ➕ Adicionando Receiver
-![Fluxo](imagens/Screenshot_41.png)
-
-<br>
-
-### ➕ Adicionando HTTPS
-![Fluxo](imagens/Screenshot_42.png)
-
-<br>
-
-### ⚙️ Configuração do Content Modifier
-![Fluxo](imagens/Screenshot_43.png)
-```
-Address: https://openrouter.ai/api/v1/chat/completions
-Method: POST
-Authentication None
-
-Request Headers: *
-```
-
-<br>
-	
-# 🔹 14. Groovy Script
-
-### ➕ Adicionando Groovy Script
-![Fluxo](imagens/Screenshot_44.png)
-
-<br>
-
-### 🏷️ Renomeando o Groovy Script
-![Fluxo](imagens/Screenshot_45.png)
-```
-GS_ParseAI
-```
-<br>
-
-### ➕ Lógica do ordem de classificação
-Link do Código
-📦 [Download do Groovy Script - GS_ParseAI](https://github.com/souzajean/Valorant-Smart-Advisor-IA-CPI-/blob/main/Script/GS_ParseAI.groovy)
-
-![Fluxo](imagens/Screenshot_46.png)
-
-<br>
-
-### ⚙️ Configuração final iflow
-![Fluxo](imagens/Screenshot_47.png)
-
-<br>
-
-# 🔹 15. Site OpenRouter
-
-### ⚙️ Configuração OpenRouter
-```
-https://openrouter.ai/workspaces/default/keys
-```
-![Fluxo](imagens/Screenshot_48.png)
-
-<br>
-
-### ⚙️ Configuração OpenRouter
-![Fluxo](imagens/Screenshot_49.png)
-
-<br>
-
-<br>
-
-# 🔹 16. Postman
-
-### ➕ Enviando o Payload
-📥 Enviando Payload Aggressive
-- Method: **POST**   
-- URL: **/valorant**   
-- Body:   
-```
-{
-  "map": "District",
-  "playstyle": "aggressive"
-}
-```
-![Fluxo](imagens/Screenshot_50.png)
-
-<br>
-
-### ➕ Enviando o Payload
-📥 Enviando Payload defensive
-- Method: **POST**   
-- URL: **/valorant**   
-- Body:   
-```
-{
-  "map": "The Range",
-  "playstyle": "defensive"
-}
-```
-![Fluxo](imagens/Screenshot_51.png)
-
-<br>
-
-### ➕ Enviando o Payload
-📥 Enviando Payload support
-- Method: **POST**   
-- URL: **/valorant**   
-- Body:   
-```
-{
-  "map": "Piazza",
-  "playstyle": "support"
-}
-```
-![Fluxo](imagens/Screenshot_52.png)
-
-<br>
-
-### ➕ Enviando o Payload
-📥 Enviando Payload strategic
-- Method: **POST**   
-- URL: **/valorant**   
-- Body:   
-```
-{
-  "map": "Corrode",
-  "playstyle": "strategic"
-}
-```
-![Fluxo](imagens/Screenshot_53.png)
-
-
-
-
-<br>
-<br>
-
----
-
-## 📦 Exemplo prático – iFlow para baixar
-
-📦 [Download do iFlow – CPI_ZPKG_Valorant-Smart-Advisor-IA-CPI-](https://github.com/souzajean/Valorant-Smart-Advisor-IA-CPI-/raw/main/Package/IFL_VALORANT_ADVISOR.zip)
-
-
-
