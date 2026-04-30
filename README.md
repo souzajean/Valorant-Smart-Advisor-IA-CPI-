@@ -413,19 +413,6 @@ https://openrouter.ai/workspaces/default/keys
 
 <br>
 
-### Resultado Payload
-📤 Saída Payload
-```
-{
-    "agente": "Fade",
-    "mapa": "Fracture",
-    "arma": "Phantom",
-    "estilodojogo": "aggressive",
-    "dica": "Jogue avançando rapidamente, buscando eliminações iniciais e pressionando o inimigo em pontos estratégicos do mapa Fracture."
-}
-```
-
-
 ### ➕ Enviando o Payload
 📥 Enviando Payload defensive
 - Method: **POST**   
@@ -433,7 +420,7 @@ https://openrouter.ai/workspaces/default/keys
 - Body:   
 ```
 {
-  "map": "District",
+  "map": "The Range",
   "playstyle": "defensive"
 }
 ```
@@ -441,20 +428,33 @@ https://openrouter.ai/workspaces/default/keys
 
 <br>
 
-### Resultado Payload
-📤 Saída Payload defensive
+### ➕ Enviando o Payload
+📥 Enviando Payload support
+- Method: **POST**   
+- URL: **/valorant**   
+- Body:   
 ```
 {
-    "agente": "Fade",
-    "mapa": "Fracture",
-    "arma": "Phantom",
-    "estilodojogo": "defensive",
-    "dica": "Jogue avançando rapidamente, buscando eliminações iniciais e pressionando o inimigo em pontos estratégicos do mapa Fracture."
+  "map": "Piazza",
+  "playstyle": "support"
 }
 ```
-![Fluxo](imagens/Screenshot_51.png)
+![Fluxo](imagens/Screenshot_52.png)
 
+<br>
 
+### ➕ Enviando o Payload
+📥 Enviando Payload strategic
+- Method: **POST**   
+- URL: **/valorant**   
+- Body:   
+```
+{
+  "map": "Corrode",
+  "playstyle": "strategic"
+}
+```
+![Fluxo](imagens/Screenshot_53.png)
 
 
 
