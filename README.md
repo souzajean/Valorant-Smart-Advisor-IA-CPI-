@@ -126,7 +126,7 @@ Nome: getMaps
 ```
 | Name        | Source Type | Source Value        | Data Type        |
 |-------------|-------------|---------------------|------------------|
-| originalBody| Expression  | ${body}             | java.lang.String |
+| maps        | Expression  | ${body}             | java.lang.String |
 
 
 ```
