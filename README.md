@@ -61,6 +61,46 @@ O **Valorant Smart Advisor** é uma solução desenvolvida no **SAP Integration 
 
 ![Fluxo](imagens/Screenshot_54.png)
 
+## 🚀 Como Funciona
+
+### 📥 Entrada da Requisição
+
+```json
+POST /valorant
+{
+  "map": "The Range",
+  "playstyle": "defensive"
+}
+```
+
+Valores suportados para playstyle:
+Valor
+Descrição
+aggressive
+Foco em entradas rápidas e eliminações
+defensive
+Prioriza posicionamento e controle de área
+support
+Foco em utilidades e suporte ao time
+strategic
+Controle de ritmo e execução tática
+Mapas suportados:
+Ascent, Split, Fracture, Bind, Breeze, Haven, Icebox, Lotus, Sunset, Pearl, The Range, Piazza, Corrode, District, Kasbah, Drift, Glitch, Abyss, Skirmish A/B/C, Basic Training.
+🔄 Fluxo de Processamento
+Recepção: Payload JSON recebido via HTTPS Adapter
+Enriquecimento: Consultas paralelas às APIs públicas do Valorant
+Regras de Negócio: Groovy Script aplica scoring de agentes e seleção de armas
+IA Generativa: Prompt estruturado enviado ao OpenRouter para refinamento
+Resposta Final: JSON formatado com recomendação completa + dica contextual
+📤 Saída da Recomendação
+json
+1234567
+🔧 Configuração do iFlow
+Package: ZPKG_Valorant_Smart_Advisor
+iFlow: IFL_VALORANT_ADVISOR
+🧱 1. Criação do Package
+
+Nome do Package:
 
 
 
@@ -70,10 +110,11 @@ O **Valorant Smart Advisor** é uma solução desenvolvida no **SAP Integration 
 
 
 
-
-
-
-
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 
 
