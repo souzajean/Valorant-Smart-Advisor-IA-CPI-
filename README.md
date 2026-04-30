@@ -125,7 +125,7 @@ POST /valorant
 
 <br>
 
-### 🧱 1. Criação do Package
+### 🔹 1. Criação do Package
 ![Fluxo](imagens/Screenshot_1.png)
 
 Nome do Package:
@@ -134,16 +134,16 @@ ZPKG_Valorant_Smart_Advisor
 ```
 ![Fluxo](imagens/Screenshot_2.png)
 
-### ➕ 2. Adição do Artefato iFlow
+### 🔹 2. Adição do Artefato iFlow
 ![Fluxo](imagens/Screenshot_3.png)
 
-### 🏷️ 3. Nome do iFlow:
+### 🔹 3. Nome do iFlow:
 ```
 IFL_VALORANT_ADVISOR
 ```
 ![Fluxo](imagens/Screenshot_4.png)
 
-### ➕ 4. Adicionando o Adapter
+### 🔹 4. Adicionando o Adapter
 ![Fluxo](imagens/Screenshot_5.png)
 
 ### 🔹 5. Configuração do Adapter HTTPS (Sender)
@@ -158,10 +158,10 @@ IFL_VALORANT_ADVISOR
 
 
 
-### ➕ 6. Adicionando o Content Modifier
+### 🔹 6. Adicionando o Content Modifier
 ![Fluxo](imagens/Screenshot_7.png)
 
-### 🏷️ 7. Renomeando o Content Modifier
+### 🔹 7. Renomeando o Content Modifier
 ```
 Nome: CM_originalBody
 ```
@@ -177,22 +177,42 @@ Configuração – Exchange Properties:
 ![Fluxo](imagens/Screenshot_9.png)
 
 
-### 🔹 9. Request-Reply – Consulta APIs Externas
+### 🔹 9. Adicionando o Request-Reply
+![Fluxo](imagens/Screenshot_10.png)
+
+### 🔹 10. Adicionando o Adapter
+![Fluxo](imagens/Screenshot_11.png)
+
+### 🔹 11. Request-Reply – Consulta APIs Externas
+
 ### 🗺️ Maps API →
 
-| Parâmetro     | Valor                            | 
-| ------------- | -------------------------------- |
-|Address        | https://valorant-api.com/v1/maps |
-| Query         | language=pt-BR                   | 
-| Method        | GET                              |
-|Authentication | None                             |
+| Parâmetro       | Valor                            | 
+| --------------- | -------------------------------- |
+|Address          | https://valorant-api.com/v1/maps |
+| Query           | language=pt-BR                   | 
+| Method          | GET                              |
+|Authentication   | None                             |
+| Request Headers | *                                |
+![Fluxo](imagens/Screenshot_12.png)
 
+### 🔹 12. Adicionando o Content Modifier
+![Fluxo](imagens/Screenshot_13.png)
 
+### 🔹 13. Renomeando o Content Modifier
+```
+Nome: CM_originalBody
+```
+![Fluxo](imagens/Screenshot_14.png)
 
-Content Modifier – getMaps:
+### 🔹 14. Content Modifier – getMaps:
 | Name  | Source Type | Source Value | Data Type        |
 | ----- | ----------- | ------------ | ---------------- |
 | maps  | Expression  | ${body}      | java.lang.String |
+![Fluxo](imagens/Screenshot_15.png)
+
+
+
 
 ### 🎮 Agents API →
 
