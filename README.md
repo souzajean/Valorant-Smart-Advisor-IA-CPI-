@@ -135,18 +135,53 @@ Nome: getMaps
 <br>
 
 
+# 🔹 6. Request Replay
+
+### ➕ Adicionando o Request Replay
+![Fluxo](imagens/Screenshot_16.png)
+
+<br>
+
+### ➕ Adicionando Reiver
+![Fluxo](imagens/Screenshot_17.png)
+
+<br>
+
+### ➕ Adicionando HTTPS
+![Fluxo](imagens/Screenshot_18.png)
+
+<br>
+
+### ⚙️ Configuração do Content Modifier
+![Fluxo](imagens/Screenshot_19.png)
+```
+Address: https://valorant-api.com/v1/agents
+Query: language=pt-BR
+Method: GET
+Authentication: None
+```
+
+# 🔹 7. Content Modifier
+
+### ➕ Adicionando o Content Modifier
+![Fluxo](imagens/Screenshot_20.png)
+
+<br>
+
+### 🏷️ Renomeando o Content Modifier
+```
+Nome: getAgents
+
+### ⚙️ Configuração do Content Modifier
+📩 Exchange Properties
+```
+| Name        | Source Type | Source Value        | Data Type        |
+|-------------|-------------|---------------------|------------------|
+| agents      | Expression  | ${body}             | java.lang.String |
+![Fluxo](imagens/Screenshot_21.png)
 
 
-
-
-
-
-# 🔹 5. Groovy Script
-Classifica o pedido com base no valor:
-
-- LOW → BAIXO   
-- MEDIUM → MÉDIO
-- HIGH → ALTO
+<br>
 
 
 
@@ -160,31 +195,13 @@ GS_Classificacao
 
 ### ➕ Lógica do ordem de classificação
 ```
-import com.sap.gateway.ip.core.customdev.util.Message
+import com.sap.gateway
 
-def Message processData(Message message) {
-
-    def amountStr = message.getProperty("amount")
-    def amount = amountStr ? amountStr.toInteger() : 0
-
-    def category = "LOW"
-
-    if(amount > 1000){
-        category = "HIGH"
-    } else if(amount > 500){
-        category = "MEDIUM"
-    }
-
-    message.setProperty("category", category)
-    return message
-}
 ```
-
-
 
 <br>
 
-# 🔹 5. Content Modifier
+# 🔹 7. Content Modifier
 
 ### ➕ Adicionando o Content Modifier
 ![Fluxo](imagens/Screenshot_14.png)
@@ -225,7 +242,7 @@ Adiciona timestamp (data/hora) e status
 
 <br>
 
-# 🔹 6. Groovy Script
+# 🔹 8. Groovy Script
 Registra o payload final no Message Monitoring
 
 📤 Payload de Saída
@@ -272,7 +289,7 @@ def Message processData(Message message) {
 
 <br>
 
-# 🔹 7. Postman
+# 🔹 9. Postman
 
 ### ➕ Enviando o Payload
 📥 Enviando Payload   
@@ -281,9 +298,7 @@ def Message processData(Message message) {
 - Body:   
 ```
 <Order>
-    <OrderID>5001</OrderID>
-    <CustomerID>2002</CustomerID>
-    <Amount>750</Amount>
+  mount>
     <Region>SP</Region>
 </Order>
 ```
@@ -297,12 +312,7 @@ def Message processData(Message message) {
 <ProcessedOrder>
     <OrderID>5001</OrderID>
     <CustomerID>2002</CustomerID>
-    <Amount>750</Amount>
-    <Region>SP</Region>
-    <Category>MEDIUM</Category>
-    <Status>PROCESSED</Status>
-    <ProcessedAt>2026-04-22 10:00:00</ProcessedAt>
-</ProcessedOrder>
+    <Amo
 ```
 
 ![Fluxo](imagens/Screenshot_21.png)
