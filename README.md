@@ -142,7 +142,7 @@ Nome: getMaps
 
 <br>
 
-### ➕ Adicionando Reiver
+### ➕ Adicionando Receiver
 ![Fluxo](imagens/Screenshot_17.png)
 
 <br>
