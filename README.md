@@ -197,6 +197,7 @@ Content Modifier – getMaps:
 ### 🎮 Agents API →
 
 | Parâmetro     | Valor                              | 
+| ------------- | ---------------------------------- |
 |Address        | https://valorant-api.com/v1/agents |
 | Query         | language=pt-BR                     | 
 | Method        | GET                                |
@@ -205,36 +206,23 @@ Content Modifier – getMaps:
 
 
 Content Modifier – getAgents:
-Name
-Source Type
-Source Value
-Data Type
-agents
-Expression
-${body}
-java.lang.String
+| Name   | Source Type | Source Value | Data Type        |
+| ------ | ----------- | ------------ | ---------------- |
+| agents | Expression  | ${body}      | java.lang.String | 
 
-### 🔫 Weapons API
+### 🔫 Weapons API →
 
-→
+| Parâmetro     | Valor                               | 
+| ------------- | ----------------------------------- |
+| Address       | https://valorant-api.com/v1/weapons | 
+| Query         | language=pt-BR                      |
+| Method        | GET                                 | 
 
-Parâmetro
-Valor
-Address
-https://valorant-api.com/v1/weapons
-Query
-language=pt-BR
-Method
-GET
+
 Content Modifier – getWeapons:
-Name
-Source Type
-Source Value
-Data Type
-weapons
-Expression
-${body}
-java.lang.String
+| Name   | Source Type | Source Value | Data Type        |
+| ------ | ----------- | ------------ | ---------------- |
+| weapons| Expression  | ${body}      | java.lang.String | 
 
 
 
