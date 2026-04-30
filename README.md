@@ -179,10 +179,152 @@ Nome: getAgents
 | Name        | Source Type | Source Value        | Data Type        |
 |-------------|-------------|---------------------|------------------|
 | agents      | Expression  | ${body}             | java.lang.String |
-
+```
 ![Fluxo](imagens/Screenshot_21.png)
 
 <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# 🔹 8. Request Replay
+
+### ➕ Adicionando o Request Replay
+![Fluxo](imagens/Screenshot_22.png)
+
+<br>
+
+### 🏷️ Renomeando o Request Replay
+```
+Nome: RR_Weapons
+```
+![Fluxo](imagens/Screenshot_23.png)
+
+<br>
+
+### ➕ Adicionando Receiver
+![Fluxo](imagens/Screenshot_24.png)
+
+<br>
+
+### ➕ Adicionando HTTPS
+![Fluxo](imagens/Screenshot_25.png)
+
+<br>
+
+### ⚙️ Configuração do Content Modifier
+![Fluxo](imagens/Screenshot_26.png)
+```
+Address: https://valorant-api.com/v1/weapons
+Query: language=pt-BR
+Method: GET
+Authentication: None
+```
+
+# 🔹 9. Content Modifier
+
+### ➕ Adicionando o Content Modifier
+![Fluxo](imagens/Screenshot_27.png)
+
+<br>
+
+### 🏷️ Renomeando o Content Modifier
+```
+Nome: getAgents
+```
+![Fluxo](imagens/Screenshot_28.png)
+
+<br>
+
+### ⚙️ Configuração do Content Modifier
+📩 Exchange Properties
+```
+| Name         | Source Type | Source Value        | Data Type        |
+|--------------|-------------|---------------------|------------------|
+| weapons      | Expression  | ${body}             | java.lang.String |
+```
+![Fluxo](imagens/Screenshot_29.png)
+
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
