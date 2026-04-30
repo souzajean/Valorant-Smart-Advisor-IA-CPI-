@@ -24,7 +24,7 @@ SAP BTP CPI - Valorant Smart Advisor
 
 ### 🏷️ Nome do Package
 ```
-ZPKG_ORDER_CLASSIFICATION
+ZPKG_Valorant_Smart_Advisor
 ```
 ![Fluxo](imagens/Screenshot_2.png)
 
@@ -37,7 +37,7 @@ ZPKG_ORDER_CLASSIFICATION
 
 ### 🏷️ Nome do iFlow
 ```
-IFL_ORDER_CLASSIFICATION_XMLMODIFIER
+IFL_VALORANT_ADVISOR
 ```
 ![Fluxo](imagens/Screenshot_4.png)
 
@@ -50,7 +50,7 @@ IFL_ORDER_CLASSIFICATION_XMLMODIFIER
 
 # 🔹 2. HTTPS Sender (Trigger)
 ```
-Endpoint: /order/classify
+Endpoint: /valorant
 ```
 ![Fluxo](imagens/Screenshot_6.png)
 
@@ -65,7 +65,7 @@ Endpoint: /order/classify
 
 ### 🏷️ Renomeando o Content Modifier
 ```
-Nome: CM_setProperty
+Nome: CM_originalBody
 ```
 ![Fluxo](imagens/Screenshot_8.png)
 
@@ -77,43 +77,51 @@ Nome: CM_setProperty
 ```
 | Name        | Source Type | Source Value        | Data Type        |
 |-------------|-------------|---------------------|------------------|
-| status      | Constant    | {{PROCESSED}}       |                  |
-| orderId     | XPath       | /Order/OrderID      | java.lang.String |
-| customerId  | XPath       | /Order/CustomerID   | java.lang.String |
-| amount      | XPath       | /Order/Amount       | java.lang.String |
-| region      | XPath       | /Order/Region       | java.lang.String |
+| originalBody| Expression  | ${body}             | java.lang.String |
+
 
 ```
 ![Fluxo](imagens/Screenshot_9.png)
 
 <br>
 
-### ⚙️ Externalização de Parâmetros
+# 🔹 4. Request Replay
 
-O parâmetro abaixo foi externalizado para facilitar manutenção e reutilização do iFlow:
-
-| Parâmetro  | Valor Padrão |
-|------------|--------------|
-| PROCESSED  | PROCESSED    |
-
+### ➕ Adicionando o Request Replay
 ![Fluxo](imagens/Screenshot_10.png)
 
 <br>
 
-# 🔹 4. Groovy Script
+### ➕ Adicionando HTTPS
+![Fluxo](imagens/Screenshot_11.png)
+
+<br>
+
+### ⚙️ Configuração do Content Modifier
+![Fluxo](imagens/Screenshot_12.png)
+```
+RR_Maps
+Connection
+Address: https://valorant-api.com/v1/maps
+Query: language=pt-BR
+Method: GET
+Authentication: None
+```
+
+
+
+
+# 🔹 5. Groovy Script
 Classifica o pedido com base no valor:
 
 - LOW → BAIXO   
 - MEDIUM → MÉDIO
 - HIGH → ALTO
 
-### ➕ Adicionando Groovy Script
-![Fluxo](imagens/Screenshot_11.png)
 
-<br>
 
 ### 🏷️ Renomeando o Groovy Script
-![Fluxo](imagens/Screenshot_12.png)
+
 ```
 GS_Classificacao
 ```
