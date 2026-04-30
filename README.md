@@ -100,13 +100,43 @@ Nome: CM_originalBody
 ### ⚙️ Configuração do Content Modifier
 ![Fluxo](imagens/Screenshot_12.png)
 ```
-RR_Maps
-Connection
 Address: https://valorant-api.com/v1/maps
 Query: language=pt-BR
 Method: GET
 Authentication: None
 ```
+# 🔹 5. Content Modifier
+
+### ➕ Adicionando o Content Modifier
+![Fluxo](imagens/Screenshot_13.png)
+
+<br>
+
+### 🏷️ Renomeando o Content Modifier
+```
+Nome: getMaps
+```
+![Fluxo](imagens/Screenshot_14.png)
+
+
+<br>
+
+### ⚙️ Configuração do Content Modifier
+📩 Exchange Properties
+```
+| Name        | Source Type | Source Value        | Data Type        |
+|-------------|-------------|---------------------|------------------|
+| originalBody| Expression  | ${body}             | java.lang.String |
+
+
+```
+![Fluxo](imagens/Screenshot_15.png)
+
+<br>
+
+
+
+
 
 
 
@@ -150,7 +180,7 @@ def Message processData(Message message) {
 }
 ```
 
-![Fluxo](imagens/Screenshot_13.png)
+
 
 <br>
 
