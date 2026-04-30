@@ -168,15 +168,24 @@ Nome: CM_originalBody
 ![Fluxo](imagens/Screenshot_8.png)
 
 ### 🔹 8. Content Modifier – Salvar Payload Original
-Nome: CM_originalBody
-
-
-
-
 Configuração – Exchange Properties:
-|Name | Source Type | Source Value | Data Type |
-|---| --- | --- | --- |
-|originalBody |Expression|${body}|java.lang.String|
+
+| Name         | Source Type | Source Value | Data Type      |
+| ------------ | ----------- | ------------ | -------------- |
+| originalBody | Expression  | ${body}      |java.lang.String|
+
+![Fluxo](imagens/Screenshot_9.png)
+
+
+
+
+
+
+
+
+
+
+
 
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
