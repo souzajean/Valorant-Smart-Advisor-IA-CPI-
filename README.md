@@ -47,18 +47,16 @@ Download do Groovy Script - GS_PreparePrompt.groovy
 
 🔹 8. Request-Reply – Chamada à IA (OpenRouter) →
 
-Parâmetro
-Valor
-Nome
-RR_IA
-Address
-https://openrouter.ai/api/v1/chat/completions
-Method
-POST
-Authentication
-None
-Request Headers
-* (herda do Content Modifier anterior)
+| Parâmetro      | Valor                                         |
+| -------------- | --------------------------------------------- |
+| Nome           | RR_IA                                         |
+| Address        | https://openrouter.ai/api/v1/chat/completions |
+| Method         | POST                                          |
+|Authentication  | None                                          |
+|Request Headers | *                                             |
+
+
+
 🔹 9. Groovy Script – Parsing da Resposta da IA
 
 Nome: GS_ParseAI
@@ -82,30 +80,34 @@ URL: https://openrouter.ai/workspaces/default/keys
 
 ⚙️ Modelo Utilizado
 
-Parâmetro
-Valor
-Model
-nvidia/nemotron-3-super-120b-a12b:free
-Temperature
-0.3 (respostas mais determinísticas)
+| Parâmetro   | Valor                                  |
+| ----------- | -------------------------------------- |
+| Model       | nvidia/nemotron-3-super-120b-a12b:free |
+| Temperature | 0.3                                    |
+(respostas mais determinísticas)
+
 Output Format
 JSON estruturado
 📡 Testando com Postman
-🎯 Payload – Estilo Agressivo
+### 🎯 Payload – Estilo Agressivo
 json
-12345
+```
+```
 
-🛡️ Payload – Estilo Defensivo
+### 🛡️ Payload – Estilo Defensivo
 json
-12345
+```
+```
 
-🤝 Payload – Estilo Suporte
+### 🤝 Payload – Estilo Suporte
 json
-12345
+```
+```
 
-🧠 Payload – Estilo Estratégico
+### 🧠 Payload – Estilo Estratégico
 json
-12345
+```
+```
 
 🔐 Segurança & Boas Práticas
 ⚠️ Importante: Este repositório é para fins educacionais e de demonstração.
