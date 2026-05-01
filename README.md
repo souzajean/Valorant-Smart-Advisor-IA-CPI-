@@ -1,31 +1,20 @@
-### 🔹 32. Preparação para IA – Headers e Prompt
-Content Modifier – CM_setValues_IA: →
+🔹 36. Adicionando o Groovy Script
+![Fluxo](imagens/Screenshot_36.png)
 
-| Header        | Source Type | Source Value                                     |
-| ------------- | ----------- | ------------------------------------------------ |
-| Authorization | Constant    | Bearer sk-or-v1-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx |
-| Content-Type  | Constant    | application/json                                 |
-⚠️ Atenção: Substitua a chave de exemplo pela sua chave real do OpenRouter.
-
-
+🔹 37. Renomeando o Groovy Script
+```
+GS_PreparePrompt
+```
+![Fluxo](imagens/Screenshot_37.png)
 
 
+🔹 31. Groovy Script – Regras de Negócio
 
+### 📦 Baixar Groovy Script
 
+📦 [Download do Groovy Script – GS_PreparePrompt:-](https://github.com/souzajean/Valorant-Smart-Advisor-IA-CPI-/blob/main/Script/GS_PreparePrompt.groovy)
 
-
-
-
-
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
-
-
-
+![Fluxo](imagens/Screenshot_32.png)
 
 
 
@@ -35,9 +24,28 @@ Groovy Script – GS_PreparePrompt:
 
 📦 Código fonte:
 Download do Groovy Script - GS_PreparePrompt.groovy
-🔹 8. Request-Reply – Chamada à IA (OpenRouter)
 
-→
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+🔹 8. Request-Reply – Chamada à IA (OpenRouter) →
 
 Parâmetro
 Valor
