@@ -12,8 +12,8 @@
 ### 🛡️ Payload – Estilo Defensivo
 ```json
 {
-  "map": "Fracture",
-  "playstyle": "aggressive"
+  "map": "The Range",
+  "playstyle": "defensive"
 }
 ```
 ![Fluxo](imagens/Screenshot_51.png)
@@ -22,8 +22,8 @@
 ### 🤝 Payload – Estilo Suporte
 ```json
 {
-  "map": "Fracture",
-  "playstyle": "aggressive"
+  "map": "Piazza",
+  "playstyle": "support"
 }
 ```
 ![Fluxo](imagens/Screenshot_52.png)
@@ -31,8 +31,8 @@
 ### 🧠 Payload – Estilo Estratégico
 ```json
 {
-  "map": "Fracture",
-  "playstyle": "aggressive"
+  "map": "Corrode",
+  "playstyle": "strategic"
 }
 ```
 ![Fluxo](imagens/Screenshot_53.png)
