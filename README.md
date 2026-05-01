@@ -1,11 +1,22 @@
-🔹 29. Groovy Script – Regras de Negócio
-### 📦 Baixar Groovy Script
-
-📦 [Download – GS_Valorant-](https://github.com/souzajean/Valorant-Smart-Advisor-IA-CPI-/blob/main/Script/GS_Valorant.groovy)
-
-
+🔹 29. Adicionando o Groovy Script
 ![Fluxo](imagens/Screenshot_30.png)
 
+🔹 30. Renomeando o Groovy Script
+```
+GS_Valorant
+```
+![Fluxo](imagens/Screenshot_31.png)
+
+
+🔹 31. Groovy Script – Regras de Negócio
+
+### 📦 Baixar Groovy Script
+
+📦 [Download do Groovy Script - GS_Valorant-](https://github.com/souzajean/Valorant-Smart-Advisor-IA-CPI-/blob/main/Script/GS_Valorant.groovy)
+
+
+
+
 
 
 
@@ -29,10 +40,10 @@
 
 
 
-Nome: GS_Valorant
+
 
 📦 Código fonte:
-Download do Groovy Script - GS_Valorant.groovy
+
 
 🔹 7. Preparação para IA – Headers e Prompt
 Content Modifier – CM_setValues_IA:
