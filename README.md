@@ -1,25 +1,12 @@
 
 
-## 🔐 Segurança & Boas Práticas
-⚠️ Importante: Este repositório é para fins educacionais e de demonstração.
-
-### 🔒 Recomendações para Produção
-
-
-| Área              | Situação Atual                                    | Sugestão para Produção                                   |
-| ----------------- | ------------------------------------------------- |--------------------------------------------------------- |
-| 🔑 API Keys       | Hardcoded no Content Modifier                     | Usar SAP Credential Store ou BTP Destination Service     |
-| 🔄 Resiliência    | Sem fallback na chamada à IA                      | Adicionar Exception Subprocess com retry ou fallback     |
-| 📦 Validação      | Validação básica no Groovy                        | Incluir JSON Schema Validator antes do processamento     |
-| 📊 Monitoramento  | Logs via message.log                              | Integrar com SAP Cloud Integration Monitor + métricas    |
-| ⚡ Performance    | Chamadas sequenciais às APIs                      | Avaliar Multicast paralelo                               |
-| ♻️ Cache          | Sem cache de dados estáticos                      | Usar Data Store do CPI (cache 15–30 min)                 |
-|🚫 Dados Sensíveis | Nunca commitar chaves de API reais no repositório | Utilizar variáveis de ambiente ou serviços seguros de credenciais | Rotacionar chaves periodicamente |
+## Download iflow
+| 🗂️ Pacote Completo do iFlow | Link                                                                                                                       |
+| ---- | -----------------------| ------------------------------------------------------------------------------------------------------------------- |
+|📥 Download do iFlow         | [Baixar](https://github.com/souzajean/ZPKG_ORDER_CLASSIFICATION/raw/main/Package/IFL_ORDER_CLASSIFICATION_XMLMODIFIER.zip) |
 
 
 
-🗂️ Pacote Completo do iFlow
-📥 Download do iFlow – CPI_ZPKG_Valorant-Smart-Advisor-IA-CPI-
 
 ## 💡 Como importar no SAP CPI:
 - Acesse o SAP Integration Suite
@@ -39,13 +26,16 @@
 
 
 
-
+---
 🤝 Contribuindo   
 Contribuições são bem-vindas! Sinta-se à vontade para:
 
 
 📄 Licença
 Este projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
+
+---
+
 <p align="center">
 <strong>Desenvolvido Jean Souza</strong><br>
 <sub>Feito por <a href="https://github.com/souzajean">@souzajean</a> • SAP BTP • Valorant Smart Advisor</sub>
@@ -58,12 +48,10 @@ Este projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes
 
 
 
-<br>
-<br>
 
----
+
 
 ## 📦 Exemplo prático – iFlow para baixar
 
-📦 [Download do iFlow – CPI_ZPKG_ORDER_CLASSIFICATION](https://github.com/souzajean/ZPKG_ORDER_CLASSIFICATION/raw/main/Package/IFL_ORDER_CLASSIFICATION_XMLMODIFIER.zip)
+
 
