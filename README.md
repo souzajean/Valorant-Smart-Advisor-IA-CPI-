@@ -28,6 +28,7 @@ Request-Reply – Chamada à IA (OpenRouter)
 | Method         | POST                                          |
 |Authentication  | None                                          |
 |Request Headers | *                                             |
+![Fluxo](imagens/Screenshot_43.png)
 
 
 
