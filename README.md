@@ -1,41 +1,4 @@
-## 📡 Testando com Postman
 
-### 🎯 Payload – Estilo Agressivo
-```json
-{
-  "map": "District",
-  "playstyle": "aggressive"
-}
-```
-![Fluxo](imagens/Screenshot_50.png)
-
-### 🛡️ Payload – Estilo Defensivo
-```json
-{
-  "map": "The Range",
-  "playstyle": "defensive"
-}
-```
-![Fluxo](imagens/Screenshot_51.png)
-
-
-### 🤝 Payload – Estilo Suporte
-```json
-{
-  "map": "Piazza",
-  "playstyle": "support"
-}
-```
-![Fluxo](imagens/Screenshot_52.png)
-
-### 🧠 Payload – Estilo Estratégico
-```json
-{
-  "map": "Corrode",
-  "playstyle": "strategic"
-}
-```
-![Fluxo](imagens/Screenshot_53.png)
 
 
 
@@ -104,11 +67,11 @@ Ative o iFlow e teste via Postman
 
 ## 📄 Scripts Groovy Individuais
 
-| Script                  | Função                                   | Link                                 |
-| ----------------------- | ---------------------------------------- | ------------------------------------ | 
-| GS_Valorant.groovy      | Regras de negócio, scoring e estratégia  |                                      |
-| GS_PreparePrompt.groovy | Engenharia de prompt para IA             |                                      |
-| GS_ParseAI.groovy       | Parsing e formatação da resposta da IA   | Baixar                               |
+| Script                  | Função                                   | Link                                                                                                           |
+| ----------------------- | ---------------------------------------- | -------------------------------------------------------------------------------------------------------------- | 
+| GS_Valorant.groovy      | Regras de negócio, scoring e estratégia  | [Baixar](https://github.com/souzajean/Valorant-Smart-Advisor-IA-CPI-/blob/main/Script/GS_Valorant.groovy)      |
+| GS_PreparePrompt.groovy | Engenharia de prompt para IA             | [Baixar](https://github.com/souzajean/Valorant-Smart-Advisor-IA-CPI-/blob/main/Script/GS_PreparePrompt.groovy) |
+| GS_ParseAI.groovy       | Parsing e formatação da resposta da IA   | [Baixar](https://github.com/souzajean/Valorant-Smart-Advisor-IA-CPI-/blob/main/Script/GS_ParseAI.groovy)       |
 
 
 
