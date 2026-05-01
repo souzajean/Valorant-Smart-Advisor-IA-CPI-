@@ -8,17 +8,17 @@ GS_PreparePrompt
 ![Fluxo](imagens/Screenshot_37.png)
 
 
-🔹 31. Groovy Script – Regras de Negócio
+🔹 38. Groovy Script – Regras de Negócio
 
 ### 📦 Baixar Groovy Script
 
 📦 [Download do Groovy Script – GS_PreparePrompt:-](https://github.com/souzajean/Valorant-Smart-Advisor-IA-CPI-/blob/main/Script/GS_PreparePrompt.groovy)
 
-![Fluxo](imagens/Screenshot_32.png)
+![Fluxo](imagens/Screenshot_38.png)
 
 
 
-Groovy Script – GS_PreparePrompt:
+
 
 →
 
@@ -65,6 +65,14 @@ Nome: GS_ParseAI
 
 📦 Código fonte:
 Download do Groovy Script - GS_ParseAI.groovy
+
+🔹 38. Groovy Script – Regras de Negócio
+
+### 📦 Baixar Groovy Script
+
+📦 [Download do Groovy Script – GS_ParseAI:-](https://github.com/souzajean/Valorant-Smart-Advisor-IA-CPI-/blob/main/Script/GS_ParseAI.groovy)
+
+![Fluxo](imagens/Screenshot_38.png)
 
 🔹 10. Configuração Final do iFlow
 
