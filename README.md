@@ -1,5 +1,4 @@
 ### 🔹 48. Configuração OpenRouter
-#### 🔑 Gerenciamento de Chaves de API
 ```
 URL: https://openrouter.ai/workspaces/default/keys
 ```
@@ -15,9 +14,8 @@ URL: https://openrouter.ai/workspaces/default/keys
 ![Fluxo](imagens/Screenshot_48.png)
 
 
-
-
-
+### 🔹 49. Gerenciamento de Chaves de API
+![Fluxo](imagens/Screenshot_49.png)
 
 
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
