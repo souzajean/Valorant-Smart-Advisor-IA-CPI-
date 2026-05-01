@@ -1,44 +1,8 @@
-🔹 44. Adicionando o Groovy Script
-![Fluxo](imagens/Screenshot_44.png)
-
-🔹 45. Renomeando o Groovy Script
+### 🔹 48. Configuração OpenRouter
+#### 🔑 Gerenciamento de Chaves de API
 ```
-GS_ParseAI
-```
-![Fluxo](imagens/Screenshot_45.png)
-
-
-
-🔹 46. Groovy Script – Regras de Negócio
-
-### 📦 Baixar Groovy Script
-
-📦 [Download do Groovy Script – GS_ParseAI:-](https://github.com/souzajean/Valorant-Smart-Advisor-IA-CPI-/blob/main/Script/GS_ParseAI.groovy)
-
-![Fluxo](imagens/Screenshot_46.png)
-
-
-
-
-
-
-
-
-
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
-
-
-
-🔹 10. Configuração Final do iFlow
-
-🔐 Configuração OpenRouter
-🔑 Gerenciamento de Chaves de API
 URL: https://openrouter.ai/workspaces/default/keys
+```
 
 ⚙️ Modelo Utilizado
 
@@ -46,7 +10,27 @@ URL: https://openrouter.ai/workspaces/default/keys
 | ----------- | -------------------------------------- |
 | Model       | nvidia/nemotron-3-super-120b-a12b:free |
 | Temperature | 0.3                                    |
+
 (respostas mais determinísticas)
+![Fluxo](imagens/Screenshot_48.png)
+
+
+
+
+
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+
+
+
+
 
 Output Format
 JSON estruturado
