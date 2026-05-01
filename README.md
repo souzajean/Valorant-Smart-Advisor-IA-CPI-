@@ -1,57 +1,22 @@
 
 
-
-
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
-
-
-
-
-
-
-
-
-🔐 Segurança & Boas Práticas
+## 🔐 Segurança & Boas Práticas
 ⚠️ Importante: Este repositório é para fins educacionais e de demonstração.
 
-🔒 Recomendações para Produção
-Área
-Situação Atual
-Sugestão para Produção
-🔑 API Keys
-Hardcoded no Content Modifier
-Usar SAP Credential Store ou BTP Destination Service
+### 🔒 Recomendações para Produção
 
-🔄 Resiliência
-Sem fallback na chamada à IA
-Adicionar Exception Subprocess com retry ou resposta estática
 
-📦 Validação
-Validação básica no Groovy
-Incluir JSON Schema Validator antes do processamento
+| Área                   | Situação Atual    |                               |                                                              |
+| Sugestão para Produção | 🔑 API Keys      | Hardcoded no Content Modifier | Usar SAP Credential Store ou BTP Destination Service          |
+|                        | 🔄 Resiliência   | Sem fallback na chamada à IA  | Adicionar Exception Subprocess com retry ou resposta estática |
+|                        | 📦 Validação     | Validação básica no Groovy    | Incluir JSON Schema Validator antes do processamento          |
+|                        | 📊 Monitoramento | Logs via message.log          | Integrar com SAP Cloud Integration Monitor + custom metrics   |
 
-📊 Monitoramento
-Logs via message.log
-Integrar com SAP Cloud Integration Monitor + custom metrics
+|⚡ Performance | Chamadas sequenciais às APIs | Avaliar Multicast paralelo para maps/agents/weapons |
 
-⚡ Performance
-Chamadas sequenciais às APIs
-Avaliar Multicast paralelo para maps/agents/weapons
+|♻️ Cache | Sem cache de dados estáticos | Usar Data Store do CPI para cache de 15-30min |
 
-♻️ Cache
-Sem cache de dados estáticos
-Usar Data Store do CPI para cache de 15-30min
-
-🚫 Dados Sensíveis
-Nunca commitar chaves de API reais no repositório
-
-Utilizar variáveis de ambiente ou serviços seguros de credenciais
-Rotacionar chaves periodicamente
+|🚫 Dados Sensíveis | Nunca commitar chaves de API reais no repositório | Utilizar variáveis de ambiente ou serviços seguros de credenciais | Rotacionar chaves periodicamente |
 
 
 📦 Downloads
