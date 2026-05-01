@@ -1,8 +1,9 @@
 
 
 ## Download iflow
-| 🗂️ Pacote Completo do iFlow | Link                                                                                                                       |
-| ---- | -----------------------| ------------------------------------------------------------------------------------------------------------------- |
+| Nome                         | Link                                                                                                                      |
+| ---------------------------- | -------------------------------------------------------------------------------------------------------------------       |
+| 🗂️ Pacote Completo do iFlow | [Baixar](https://github.com/souzajean/Valorant-Smart-Advisor-IA-CPI-/blob/main/Package/ZPKG_Valorant_Smart_Advisor.zip)    |
 |📥 Download do iFlow         | [Baixar](https://github.com/souzajean/ZPKG_ORDER_CLASSIFICATION/raw/main/Package/IFL_ORDER_CLASSIFICATION_XMLMODIFIER.zip) |
 
 
