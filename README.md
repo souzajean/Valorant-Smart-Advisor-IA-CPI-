@@ -1,65 +1,34 @@
-🔹 29. Adicionando o Groovy Script
-![Fluxo](imagens/Screenshot_30.png)
+### 🔹 32. Preparação para IA – Headers e Prompt
+Content Modifier – CM_setValues_IA: →
 
-🔹 30. Renomeando o Groovy Script
-```
-GS_Valorant
-```
-![Fluxo](imagens/Screenshot_31.png)
-
-
-🔹 31. Groovy Script – Regras de Negócio
-
-### 📦 Baixar Groovy Script
-
-📦 [Download do Groovy Script - GS_Valorant-](https://github.com/souzajean/Valorant-Smart-Advisor-IA-CPI-/blob/main/Script/GS_Valorant.groovy)
-
-
-
-
-
-
-
-
-
-
-
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
-
-
-
-
-
-
-
-
-
-
-
-
-📦 Código fonte:
-
-
-🔹 7. Preparação para IA – Headers e Prompt
-Content Modifier – CM_setValues_IA:
-
-→
-
-Header
-Source Type
-Source Value
-Authorization
-Constant
-Bearer sk-or-v1-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-Content-Type
-Constant
-application/json
+| Header        | Source Type | Source Value                                     |
+| ------------- | ----------- | ------------------------------------------------ |
+| Authorization | Constant    | Bearer sk-or-v1-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx |
+| Content-Type  | Constant    | application/json                                 |
 ⚠️ Atenção: Substitua a chave de exemplo pela sua chave real do OpenRouter.
+
+
+
+
+
+
+
+
+
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+
+
+
+
+
 Groovy Script – GS_PreparePrompt:
 
 →
