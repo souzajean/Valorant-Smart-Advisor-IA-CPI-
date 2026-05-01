@@ -40,21 +40,14 @@
 
 
 
-🤝 Contribuindo
+🤝 Contribuindo   
 Contribuições são bem-vindas! Sinta-se à vontade para:
-🍴 Fazer fork do projeto
-🌿 Criar uma branch para sua feature (git checkout -b feature/AmazingFeature)
-💾 Commitar suas alterações (git commit -m 'Add: AmazingFeature')
-📤 Enviar para o repositório (git push origin feature/AmazingFeature)
-🔓 Abrir um Pull Request
-🐛 Encontrou um bug?
-Abra uma Issue descrevendo o problema
-Inclua passos para reproduzir e, se possível, logs do CPI
-Sugira uma solução ou melhoria
+
+
 📄 Licença
 Este projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
 <p align="center">
-<strong>Desenvolvido com 💙 para a comunidade SAP e gamers</strong><br>
+<strong>Desenvolvido Jean Souza</strong><br>
 <sub>Feito por <a href="https://github.com/souzajean">@souzajean</a> • SAP BTP • Valorant Smart Advisor</sub>
 </p>
 
