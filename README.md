@@ -1,59 +1,61 @@
-### 🔹 48. Configuração OpenRouter
-```
-URL: https://openrouter.ai/workspaces/default/keys
-```
+## 📡 Testando com Postman
 
-⚙️ Modelo Utilizado
-
-| Parâmetro   | Valor                                  |
-| ----------- | -------------------------------------- |
-| Model       | nvidia/nemotron-3-super-120b-a12b:free |
-| Temperature | 0.3                                    |
-
-![Fluxo](imagens/Screenshot_48.png)
-
-
-### 🔹 49. Gerenciamento de Chaves de API
-![Fluxo](imagens/Screenshot_49.png)
-
-
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
-
-
-
-
-
-
-Output Format
-JSON estruturado
-📡 Testando com Postman
 ### 🎯 Payload – Estilo Agressivo
-json
+```json
+{
+  "map": "District",
+  "playstyle": "aggressive"
+}
 ```
-```
+![Fluxo](imagens/Screenshot_50.png)
 
 ### 🛡️ Payload – Estilo Defensivo
-json
+```json
+{
+  "map": "Fracture",
+  "playstyle": "aggressive"
+}
 ```
-```
+![Fluxo](imagens/Screenshot_51.png)
+
 
 ### 🤝 Payload – Estilo Suporte
-json
+```json
+{
+  "map": "Fracture",
+  "playstyle": "aggressive"
+}
 ```
-```
+![Fluxo](imagens/Screenshot_52.png)
 
 ### 🧠 Payload – Estilo Estratégico
-json
+```json
+{
+  "map": "Fracture",
+  "playstyle": "aggressive"
+}
 ```
-```
+![Fluxo](imagens/Screenshot_53.png)
+
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+
+
+
+
+
+
 
 🔐 Segurança & Boas Práticas
 ⚠️ Importante: Este repositório é para fins educacionais e de demonstração.
+
 🔒 Recomendações para Produção
 Área
 Situação Atual
@@ -61,47 +63,57 @@ Sugestão para Produção
 🔑 API Keys
 Hardcoded no Content Modifier
 Usar SAP Credential Store ou BTP Destination Service
+
 🔄 Resiliência
 Sem fallback na chamada à IA
 Adicionar Exception Subprocess com retry ou resposta estática
+
 📦 Validação
 Validação básica no Groovy
 Incluir JSON Schema Validator antes do processamento
+
 📊 Monitoramento
 Logs via message.log
 Integrar com SAP Cloud Integration Monitor + custom metrics
+
 ⚡ Performance
 Chamadas sequenciais às APIs
 Avaliar Multicast paralelo para maps/agents/weapons
+
 ♻️ Cache
 Sem cache de dados estáticos
 Usar Data Store do CPI para cache de 15-30min
+
 🚫 Dados Sensíveis
 Nunca commitar chaves de API reais no repositório
+
 Utilizar variáveis de ambiente ou serviços seguros de credenciais
 Rotacionar chaves periodicamente
+
+
 📦 Downloads
 🗂️ Pacote Completo do iFlow
 📥 Download do iFlow – CPI_ZPKG_Valorant-Smart-Advisor-IA-CPI-
 💡 Como importar no SAP CPI:
+
 Acesse o SAP Integration Suite
 Navegue até Monitor → Artifacts
 Clique em Import e selecione o arquivo .zip
 Configure as destinations/credenciais conforme necessário
 Ative o iFlow e teste via Postman
-📄 Scripts Groovy Individuais
-Script
-Função
-Link
-GS_Valorant.groovy
-Regras de negócio, scoring e estratégia
-Baixar
-GS_PreparePrompt.groovy
-Engenharia de prompt para IA
-Baixar
-GS_ParseAI.groovy
-Parsing e formatação da resposta da IA
-Baixar
+
+## 📄 Scripts Groovy Individuais
+
+| Script                  | Função                                   | Link                                 |
+| ----------------------- | ---------------------------------------- | ------------------------------------ | 
+| GS_Valorant.groovy      | Regras de negócio, scoring e estratégia  |                                      |
+| GS_PreparePrompt.groovy | Engenharia de prompt para IA             |                                      |
+| GS_ParseAI.groovy       | Parsing e formatação da resposta da IA   | Baixar                               |
+
+
+
+
+
 🤝 Contribuindo
 Contribuições são bem-vindas! Sinta-se à vontade para:
 🍴 Fazer fork do projeto
