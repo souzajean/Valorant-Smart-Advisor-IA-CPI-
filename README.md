@@ -1,51 +1,25 @@
-🔹 36. Adicionando o Groovy Script
-![Fluxo](imagens/Screenshot_36.png)
+### 🔹 39. Adicionando o Request-Reply
+![Fluxo](imagens/Screenshot_39.png)
 
-🔹 37. Renomeando o Groovy Script
+
+### 🔹 40. Renomeando Request-Reply
 ```
-GS_PreparePrompt
+RR_IA
 ```
-![Fluxo](imagens/Screenshot_37.png)
+![Fluxo](imagens/Screenshot_40.png)
 
 
-🔹 38. Groovy Script – Regras de Negócio
-
-### 📦 Baixar Groovy Script
-
-📦 [Download do Groovy Script – GS_PreparePrompt:-](https://github.com/souzajean/Valorant-Smart-Advisor-IA-CPI-/blob/main/Script/GS_PreparePrompt.groovy)
-
-![Fluxo](imagens/Screenshot_38.png)
+### 🔹 41. Adicionando o Receiver
+![Fluxo](imagens/Screenshot_41.png)
 
 
+### 🔹 42. Adicionando o HTTP
+![Fluxo](imagens/Screenshot_42.png)
 
 
-
-→
-
-📦 Código fonte:
-Download do Groovy Script - GS_PreparePrompt.groovy
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
-
-🔹 8. Request-Reply – Chamada à IA (OpenRouter) →
+### 🔹 43. Adicionando o HTTP
+### 🔫 Weapons API →
+Request-Reply – Chamada à IA (OpenRouter)
 
 | Parâmetro      | Valor                                         |
 | -------------- | --------------------------------------------- |
@@ -54,6 +28,31 @@ Download do Groovy Script - GS_PreparePrompt.groovy
 | Method         | POST                                          |
 |Authentication  | None                                          |
 |Request Headers | *                                             |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
 
 
 
