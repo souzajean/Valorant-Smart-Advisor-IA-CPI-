@@ -1,76 +1,38 @@
-### 🔹 39. Adicionando o Request-Reply
-![Fluxo](imagens/Screenshot_39.png)
+🔹 44. Adicionando o Groovy Script
+![Fluxo](imagens/Screenshot_44.png)
 
-
-### 🔹 40. Renomeando Request-Reply
+🔹 45. Renomeando o Groovy Script
 ```
-RR_IA
+GS_ParseAI
 ```
-![Fluxo](imagens/Screenshot_40.png)
-
-
-### 🔹 41. Adicionando o Receiver
-![Fluxo](imagens/Screenshot_41.png)
-
-
-### 🔹 42. Adicionando o HTTP
-![Fluxo](imagens/Screenshot_42.png)
-
-
-### 🔹 43. Adicionando o HTTP
-### 🔫 Weapons API →
-Request-Reply – Chamada à IA (OpenRouter)
-
-| Parâmetro      | Valor                                         |
-| -------------- | --------------------------------------------- |
-| Nome           | RR_IA                                         |
-| Address        | https://openrouter.ai/api/v1/chat/completions |
-| Method         | POST                                          |
-|Authentication  | None                                          |
-|Request Headers | *                                             |
-![Fluxo](imagens/Screenshot_43.png)
+![Fluxo](imagens/Screenshot_45.png)
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
-
-
-
-
-🔹 9. Groovy Script – Parsing da Resposta da IA
-
-Nome: GS_ParseAI
-
-📦 Código fonte:
-Download do Groovy Script - GS_ParseAI.groovy
-
-🔹 38. Groovy Script – Regras de Negócio
+🔹 46. Groovy Script – Regras de Negócio
 
 ### 📦 Baixar Groovy Script
 
 📦 [Download do Groovy Script – GS_ParseAI:-](https://github.com/souzajean/Valorant-Smart-Advisor-IA-CPI-/blob/main/Script/GS_ParseAI.groovy)
 
-![Fluxo](imagens/Screenshot_38.png)
+![Fluxo](imagens/Screenshot_46.png)
+
+
+
+
+
+
+
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+
 
 🔹 10. Configuração Final do iFlow
 
