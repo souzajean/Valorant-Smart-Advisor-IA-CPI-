@@ -1,43 +1,10 @@
+🔹 29. Groovy Script – Regras de Negócio
+### 📦 Baixar Groovy Script
 
-### 🔹 17. Adicionando o HTTP
-![Fluxo](imagens/Screenshot_18.png)
-
-### 🔹 18. Adicionando o HTTP
-![Fluxo](imagens/Screenshot_19.png)
+📦 [Download do iFlow – CPI_ZPKG_ORDER_CLASSIFICATION](https://github.com/souzajean/GS_Valorant/blob/main/Package/GS_Valorant.groovy)
 
 
-
-
-### 🔹 19. Agents API →
-
-| Parâmetro     | Valor                              | 
-| ------------- | ---------------------------------- |
-|Address        | https://valorant-api.com/v1/agents |
-| Query         | language=pt-BR                     | 
-| Method        | GET                                |
-|Authentication | None                               |
-
-
-
-Content Modifier – getAgents:
-| Name   | Source Type | Source Value | Data Type        |
-| ------ | ----------- | ------------ | ---------------- |
-| agents | Expression  | ${body}      | java.lang.String | 
-
-### 🔫 Weapons API →
-
-| Parâmetro     | Valor                               | 
-| ------------- | ----------------------------------- |
-| Address       | https://valorant-api.com/v1/weapons | 
-| Query         | language=pt-BR                      |
-| Method        | GET                                 | 
-
-
-Content Modifier – getWeapons:
-| Name   | Source Type | Source Value | Data Type        |
-| ------ | ----------- | ------------ | ---------------- |
-| weapons| Expression  | ${body}      | java.lang.String | 
-
+![Fluxo](imagens/Screenshot_30.png)
 
 
 
@@ -60,7 +27,7 @@ Content Modifier – getWeapons:
 
 
 
-🔹 6. Groovy Script – Regras de Negócio
+
 
 Nome: GS_Valorant
 
@@ -216,3 +183,15 @@ Este projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes
 <a href="#-valorant-smart-advisor--ia--sap-cpi">⬆️ Voltar ao topo</a>
 </p>
 ```
+
+
+
+<br>
+<br>
+
+---
+
+## 📦 Exemplo prático – iFlow para baixar
+
+📦 [Download do iFlow – CPI_ZPKG_ORDER_CLASSIFICATION](https://github.com/souzajean/ZPKG_ORDER_CLASSIFICATION/raw/main/Package/IFL_ORDER_CLASSIFICATION_XMLMODIFIER.zip)
+
