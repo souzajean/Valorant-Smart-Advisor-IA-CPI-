@@ -1,7 +1,7 @@
 🔹 29. Groovy Script – Regras de Negócio
 ### 📦 Baixar Groovy Script
 
-📦 [Download – GS_Valorant-](https://github.com/souzajean/Valorant-Smart-Advisor-IA-CPI-/blob/main/Package/GS_Valorant.groovy)
+📦 [Download – GS_Valorant-](https://github.com/souzajean/Valorant-Smart-Advisor-IA-CPI-/blob/main/Script/GS_Valorant.groovy)
 
 
 ![Fluxo](imagens/Screenshot_30.png)
