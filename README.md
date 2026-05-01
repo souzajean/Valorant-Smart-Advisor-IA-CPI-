@@ -1,16 +1,14 @@
-![Fluxo](imagens/Screenshot_14.png)
 
-### 🔹 14. Content Modifier – getMaps:
-| Name  | Source Type | Source Value | Data Type        |
-| ----- | ----------- | ------------ | ---------------- |
-| maps  | Expression  | ${body}      | java.lang.String |
+### 🔹 17. Adicionando o HTTP
+![Fluxo](imagens/Screenshot_18.png)
 
-![Fluxo](imagens/Screenshot_15.png)
+### 🔹 18. Adicionando o HTTP
+![Fluxo](imagens/Screenshot_19.png)
 
 
 
 
-### 🎮 Agents API →
+### 🔹 19. Agents API →
 
 | Parâmetro     | Valor                              | 
 | ------------- | ---------------------------------- |
