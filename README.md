@@ -10,7 +10,6 @@ URL: https://openrouter.ai/workspaces/default/keys
 | Model       | nvidia/nemotron-3-super-120b-a12b:free |
 | Temperature | 0.3                                    |
 
-(respostas mais determinísticas)
 ![Fluxo](imagens/Screenshot_48.png)
 
 
