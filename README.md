@@ -17,16 +17,16 @@
 |🚫 Dados Sensíveis | Nunca commitar chaves de API reais no repositório | Utilizar variáveis de ambiente ou serviços seguros de credenciais | Rotacionar chaves periodicamente |
 
 
-📦 Downloads
+
 🗂️ Pacote Completo do iFlow
 📥 Download do iFlow – CPI_ZPKG_Valorant-Smart-Advisor-IA-CPI-
-💡 Como importar no SAP CPI:
 
-Acesse o SAP Integration Suite
-Navegue até Monitor → Artifacts
-Clique em Import e selecione o arquivo .zip
-Configure as destinations/credenciais conforme necessário
-Ative o iFlow e teste via Postman
+## 💡 Como importar no SAP CPI:
+- Acesse o SAP Integration Suite
+- Navegue até Monitor → Artifacts
+- Clique em Import e selecione o arquivo .zip
+- Configure as destinations/credenciais conforme necessário
+- Ative o iFlow e teste via Postman
 
 ## 📄 Scripts Groovy Individuais
 
