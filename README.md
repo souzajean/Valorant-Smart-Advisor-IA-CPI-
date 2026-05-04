@@ -549,4 +549,3 @@ Este projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes
 <p align="center">
 <a href="#-valorant-smart-advisor--ia--sap-cpi">⬆️ Voltar ao topo</a>
 </p>
-```
