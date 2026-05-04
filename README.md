@@ -207,6 +207,8 @@ Nome: getMaps
 ![Fluxo](imagens/Screenshot_14.png)
 
 ### 🔹 14. Content Modifier – getMaps:
+Configuração – Exchange Properties:
+
 | Name  | Source Type | Source Value | Data Type        |
 | ----- | ----------- | ------------ | ---------------- |
 | maps  | Expression  | ${body}      | java.lang.String |
