@@ -202,7 +202,7 @@ Configuração – Exchange Properties:
 
 ### 🔹 13. Renomeando o Content Modifier
 ```
-Nome: CM_originalBody
+Nome: getMaps
 ```
 ![Fluxo](imagens/Screenshot_14.png)
 
