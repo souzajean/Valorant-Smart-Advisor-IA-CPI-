@@ -251,6 +251,8 @@ Configuração – Exchange Properties:
 Nome: getAgents
 ```
 Content Modifier – getAgents:
+Configuração – Exchange Properties:
+
 | Name   | Source Type | Source Value | Data Type        |
 | ------ | ----------- | ------------ | ---------------- |
 | agents | Expression  | ${body}      | java.lang.String |
