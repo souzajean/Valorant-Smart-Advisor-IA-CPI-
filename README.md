@@ -238,6 +238,7 @@ Configuração – Exchange Properties:
 | Query         | language=pt-BR                     | 
 | Method        | GET                                |
 |Authentication | None                               |
+
 ![Fluxo](imagens/Screenshot_19.png)
 
 
