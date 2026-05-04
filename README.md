@@ -2,6 +2,9 @@
 
 > **Solução de recomendação inteligente para Valorant construída no SAP Integration Suite (CPI), combinando orquestração de APIs, Groovy Scripts e IA Generativa.**
 
+
+Neste artigo estamos mostrando uma solução, desenvolvida no SAP Integration Suite (CPI), atua como um motor de recomendação inteligente para o jogo Valorant. O iFlow orquestra consultas a APIs públicas de dados de jogo (mapas, agentes e armas) e processa essas informações através de um pipeline de IA Generativa. O resultado é um assistente tático que fornece sugestões personalizadas de personagens e estratégias, adaptadas ao estilo de jogo do usuário e ao mapa selecionado."
+
 <p align="center">
   <img src="https://img.shields.io/badge/SAP-CPI-blue?style=for-the-badge&logo=sap" alt="SAP CPI">
   <img src="https://img.shields.io/badge/Groovy-4298B8?style=for-the-badge&logo=apachegroovy&logoColor=white" alt="Groovy">
