@@ -305,6 +305,7 @@ Content Modifier – getWeapons:
 | Name   | Source Type | Source Value | Data Type        |
 | ------ | ----------- | ------------ | ---------------- |
 | weapons| Expression  | ${body}      | java.lang.String |
+
 ![Fluxo](imagens/Screenshot_29.png)
 
 
