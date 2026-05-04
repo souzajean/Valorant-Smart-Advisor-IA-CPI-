@@ -301,7 +301,9 @@ Nome: getWeapons
 ![Fluxo](imagens/Screenshot_28.png)
 
 
-Content Modifier – getWeapons:
+Content Modifier – getWeapons:   
+Configuração – Exchange Properties:
+
 | Name   | Source Type | Source Value | Data Type        |
 | ------ | ----------- | ------------ | ---------------- |
 | weapons| Expression  | ${body}      | java.lang.String |
