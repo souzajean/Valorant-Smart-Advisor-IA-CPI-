@@ -286,7 +286,8 @@ RR_Weapons
 | ------------- | ----------------------------------- |
 | Address       | https://valorant-api.com/v1/weapons | 
 | Query         | language=pt-BR                      |
-| Method        | GET                                 | 
+| Method        | GET                                 |
+
 ![Fluxo](imagens/Screenshot_26.png)
 
 ### 🔹 27. Adicionando o Content Modifier
